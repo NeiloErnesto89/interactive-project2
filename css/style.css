@@ -1,0 +1,89 @@
+.cover-container {
+    min-height: 100vh;
+    background-color: rgb(217, 255, 204);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    position: relative;
+}
+
+
+.mainheader {
+    color: green;
+}
+
+.underhead {
+    color: green;
+}
+
+.hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+
+.regional-pie {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+
+.regional-line {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.chart-wrapper {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(28, 163, 42, 0.3);
+    margin: 20px;
+    /*text-align: center;*/
+    display: flex;
+}
+
+.regional-selector {
+    
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+    height: 10px;
+  
+    
+    
+}
+
+/* GRAPH LABELS */
+
+#eu-pollution-chart .axis.x > .tick > text  {
+    
+    text-align: right;
+    font-size: 8.2px;
+    transform: translate(-12px, 8px) rotate(-30deg);
+    
+    /*formerly -12px, 22px (-90deg)*/
+}
+
+
+/*
+#eu-pollution-chart > .x-axis-label   {
+    
+transform: translate(425,725); 
+    
+}
+
+*/

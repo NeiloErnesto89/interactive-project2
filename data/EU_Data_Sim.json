@@ -1,0 +1,372 @@
+[
+  {
+    "Country": "",
+    "Region": "Africa",
+    "Year": 2015,
+    "EmissionsR": 38,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "Americas",
+    "Year": 2015,
+    "EmissionsR": 91,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "Asia",
+    "Year": 2015,
+    "EmissionsR": 134,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "China",
+    "Year": 2015,
+    "EmissionsR": 185,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "EU-28",
+    "Year": 2015,
+    "EmissionsR": 330,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "Europe",
+    "Year": 2015,
+    "EmissionsR": 186,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "India",
+    "Year": 2015,
+    "EmissionsR": 44,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "Middle East",
+    "Year": 2015,
+    "EmissionsR": 60,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "",
+    "Region": "USA",
+    "Year": 2015,
+    "EmissionsR": 38,
+    "EmissionsC": "",
+    "Deaths": "",
+    "GDP": "",
+    "Population": ""
+  },
+  {
+    "Country": "Austria",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 69,
+    "Deaths": 16,
+    "GDP": 45437,
+    "Population": 8.7
+  },
+  {
+    "Country": "Belgium",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 100,
+    "Deaths": 17,
+    "GDP": 42659,
+    "Population": 11.4
+  },
+  {
+    "Country": "Bulgaria",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 49,
+    "Deaths": 39,
+    "GDP": 18563,
+    "Population": 7
+  },
+  {
+    "Country": "Croatia",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 17,
+    "Deaths": 27,
+    "GDP": 22670,
+    "Population": 4.1
+  },
+  {
+    "Country": "Cyprus",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 7,
+    "Deaths": 23,
+    "GDP": 32415,
+    "Population": 1.1
+  },
+  {
+    "Country": "Czech Rep",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 107,
+    "Deaths": 27,
+    "GDP": 32606,
+    "Population": 10.6
+  },
+  {
+    "Country": "Denmark",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 34,
+    "Deaths": 17,
+    "GDP": 46683,
+    "Population": 5.7
+  },
+  {
+    "Country": "Estonia",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 19,
+    "Deaths": 11,
+    "GDP": 29481,
+    "Population": 1.3
+  },
+  {
+    "Country": "Finland",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 45,
+    "Deaths": 8,
+    "GDP": 40586,
+    "Population": 5.5
+  },
+  {
+    "Country": "France",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 356,
+    "Deaths": 11,
+    "GDP": 38606,
+    "Population": 64.9
+  },
+  {
+    "Country": "Germany",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 799,
+    "Deaths": 18,
+    "GDP": 45229,
+    "Population": 82.1
+  },
+  {
+    "Country": "Greece",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 76,
+    "Deaths": 23,
+    "GDP": 24574,
+    "Population": 11.1
+  },
+  {
+    "Country": "Hungary",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 50,
+    "Deaths": 28,
+    "GDP": 26778,
+    "Population": 9.7
+  },
+  {
+    "Country": "Ireland",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 39,
+    "Deaths": 13,
+    "GDP": 67335,
+    "Population": 4.7
+  },
+  {
+    "Country": "Italy",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 355,
+    "Deaths": 15,
+    "GDP": 35220,
+    "Population": 59.3
+  },
+  {
+    "Country": "Latvia",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 7,
+    "Deaths": 30,
+    "GDP": 25064,
+    "Population": 1.9
+  },
+  {
+    "Country": "Lithuania",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 13,
+    "Deaths": 31,
+    "GDP": 29524,
+    "Population": 2.8
+  },
+  {
+    "Country": "Lux",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 9,
+    "Deaths": 14,
+    "GDP": 94278,
+    "Population": 0.5
+  },
+  {
+    "Country": "Malta",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 1,
+    "Deaths": 22,
+    "GDP": 36513,
+    "Population": 0.4
+  },
+  {
+    "Country": "Holland",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 164,
+    "Deaths": 17,
+    "GDP": 48473,
+    "Population": 17
+  },
+  {
+    "Country": "Poland",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 326,
+    "Deaths": 30,
+    "GDP": 27216,
+    "Population": 38.1
+  },
+  {
+    "Country": "Portugal",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 54,
+    "Deaths": 13,
+    "GDP": 27937,
+    "Population": 10.3
+  },
+  {
+    "Country": "Romania",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 79,
+    "Deaths": 30,
+    "GDP": 23313,
+    "Population": 19.6
+  },
+  {
+    "Country": "Slovakia",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 35,
+    "Deaths": 32,
+    "GDP": 30155,
+    "Population": 5.4
+  },
+  {
+    "Country": "Slovenia",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 14,
+    "Deaths": 17,
+    "GDP": 31401,
+    "Population": 2
+  },
+  {
+    "Country": "Spain",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 281,
+    "Deaths": 12,
+    "GDP": 34272,
+    "Population": 46.3
+  },
+  {
+    "Country": "Sweden",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 41,
+    "Deaths": 8,
+    "GDP": 46949,
+    "Population": 9.9
+  },
+  {
+    "Country": "UK",
+    "Region": "",
+    "Year": 2017,
+    "EmissionsR": "",
+    "EmissionsC": 384,
+    "Deaths": 16,
+    "GDP": 39753,
+    "Population": 66.1
+  }
+]
