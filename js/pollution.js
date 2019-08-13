@@ -12,10 +12,11 @@ function makeGraphs(error, pollutionData) {
     show_region_selector(ndx);
 
     show_eu_barchart(ndx);
+    
+    show_death_v_gdp_correlation(ndx);
 
     show_average_death_rate(ndx);
     
-    show_death_v_gdp_correlation(ndx);
 
  /*   show_country_death_toll(ndx); */
 
@@ -36,6 +37,10 @@ function show_region_selector(ndx) {
 function show_region_emission_chart(ndx) {
     var region_dim = ndx.dimension(dc.pluck("Region"));
     var total_emissions = region_dim.group().reduceSum(dc.pluck('EmissionsR'));
+    
+    var regionColors = d3.scale.ordinal()
+        .domain(["Africa", "Americas", "Asia" ,"China", "EU-28", "Europe", "India", "Middle East", "USA"])
+        .range(["Yellow", "Green", "Pink" ,"Gold", "Brown", "Blue", "Orange", "Blue", "Red"]);
 
 
     dc.barChart("#pollution-chart")
@@ -47,9 +52,14 @@ function show_region_emission_chart(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .colors(regionColors)
+        .colorAccessor(function(d) {
+            return d.key[1];
+        })
         .xAxisLabel("Countries")
         .yAxisLabel("Co2 Emission Level (billion tonnes)")
         .yAxis().ticks(8);
+        
 
 }
 
@@ -61,15 +71,22 @@ function show_region_emission_pie(ndx) {
 
     dc.pieChart("#region-pie-chart")
         .height(500)
-        .radius(150)
+        .radius(110)
         .transitionDuration(1500)
         .dimension(area_dim)
-        .group(total_emissions_pie);
+        .group(total_emissions_pie)
+        .externalLabels(20)
+        .drawPaths(true)
+        .minAngleForLabel(0);
 }
 
 function show_eu_barchart(ndx) {
     var region_dim = ndx.dimension(dc.pluck("Country"));
     var total_emissions = region_dim.group().reduceSum(dc.pluck('EmissionsC'));
+    
+    var countryColors = d3.scale.ordinal()
+        .domain(["Austria", "Belgium", "Bulgaria" ,"Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia" , "Lithuania","Luxembourg","Malta", "Netherlands","Poland","Portugal", "Romania","Slovakia", "Slovenia",  "Spain", "Sweden", "United Kingdom"])
+        .range(["Red", "Yellow", "Pink" ,"Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet" , "Cyan", "Crimson","Jade", "Indigo","Lime", "Magenta", "Olive","Pear", "Peach",  "Plum", "Ruby", "Salmon"]);
 
 
     dc.barChart("#eu-pollution-chart")
@@ -81,12 +98,63 @@ function show_eu_barchart(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .colors(countryColors)
+        .colorAccessor(function(d) {
+            return d.key[0];
+        })
         /*.xAxisLabel("Countries")*/
         .yAxisLabel("Co2 Emission Level (million tonnes)")
         .yAxis().ticks(7);
 
 }
 
+
+
+
+/* scatter plot ideal for correlation between 2 different data items
+e.g. death v gdp */
+
+
+
+function show_death_v_gdp_correlation(ndx) {
+    
+    var nationColors = d3.scale.ordinal()
+        .domain(["Austria", "Belgium", "Bulgaria" ,"Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia" , "Lithuania","Luxembourg","Malta", "Netherlands","Poland","Portugal", "Romania","Slovakia", "Slovenia",  "Spain", "Sweden", "United Kingdom"])
+        .range(["Red", "Yellow", "Pink" ,"Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet" , "Cyan", "Crimson","Jade", "Indigo","Lime", "Magenta", "Olive","Pear", "Peach",  "Plum", "Ruby", "Salmon"]);
+    
+    var gdpDim = ndx.dimension(dc.pluck("GDP")) /* on x axis*/
+    var deathCoDim = ndx.dimension(function (d) {
+        return [d.GDP, d.Deaths, d.Country] /*first part on x axis*/
+    });
+    var gdpAndDeathGroup = deathCoDim.group();
+    
+    var minGdpDeathRate = gdpDim.bottom(1)[0].GDP;
+    var maxGdpDeathRate = gdpDim.top(1)[0].GDP;
+    
+    
+    dc.scatterPlot("#death-v-gdp-plot")
+        .width(600)
+        .height(400)
+        .x(d3.scale.linear().domain([minGdpDeathRate, maxGdpDeathRate])) /* as gdp is numerical i.e. 10 is more than 9 */
+        .brushOn(false)
+        .symbolSize(6)
+        .clipPadding(10)
+        .xAxisLabel("GDP (€)")
+        .yAxisLabel("Deaths")
+        .title(function(d) {
+            return "The average death rate due to air pollution is " + d.key[1] + " per 100,000 in " + d.key[2];
+        })
+        .colorAccessor(function(d) {
+            return d.key[2];
+        })
+        .colors(nationColors)
+        .dimension(deathCoDim)
+        .group(gdpAndDeathGroup)
+        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .xAxis().ticks(5);
+    
+    
+}
 
 function show_average_death_rate(ndx) {
     var dim = ndx.dimension(dc.pluck("Country"));
@@ -133,51 +201,6 @@ function show_average_death_rate(ndx) {
         .xAxisLabel("Countries")
         .yAxisLabel("Death")
         .yAxis().ticks(8);
-}
-
-/* scatter plot ideal for correlation between 2 different data items
-e.g. death v gdp */
-
-
-
-function show_death_v_gdp_correlation(ndx) {
-    
-    var nationColors = d3.scale.ordinal()
-        .domain(["Austria", "Belgium", "Bulgaria" ,"Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia" , "Lithuania","Luxembourg","Malta", "Netherlands","Poland","Portugal", "Romania","Slovakia", "Slovenia",  "Spain", "Sweden", "United Kingdom"])
-        .range(["Red", "Yellow", "Pink" ,"Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet" , "Cyan", "Crimson","Jade", "Indigo","Lime", "Magenta", "Olive","Pear", "Peach",  "Plum", "Ruby", "Salmon"]);
-    
-    var gdpDim = ndx.dimension(dc.pluck("GDP")) /* on x axis*/
-    var deathCoDim = ndx.dimension(function (d) {
-        return [d.GDP, d.Deaths, d.Country] /*first part on x axis*/
-    });
-    var gdpAndDeathGroup = deathCoDim.group();
-    
-    var minGdpDeathRate = gdpDim.bottom(1)[0].GDP;
-    var maxGdpDeathRate = gdpDim.top(1)[0].GDP;
-    
-    
-    dc.scatterPlot("#death-v-gdp-plot")
-        .width(600)
-        .height(400)
-        .x(d3.scale.linear().domain([minGdpDeathRate, maxGdpDeathRate])) /* as gdp is numerical i.e. 10 is more than 9 */
-        .brushOn(false)
-        .symbolSize(6)
-        .clipPadding(10)
-        .xAxisLabel("GDP")
-        .yAxisLabel("Deaths")
-        .title(function(d) {
-            return "The average death rate due to air pollution is " + d.key[1] + " in " + d.key[2];
-        })
-        .colorAccessor(function(d) {
-            return d.key[2];
-        })
-        .colors(nationColors)
-        .dimension(deathCoDim)
-        .group(gdpAndDeathGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
-        .xAxis().ticks(5);
-    
-    
 }
 
 /*
