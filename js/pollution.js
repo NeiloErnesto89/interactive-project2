@@ -10,12 +10,16 @@ function makeGraphs(error, pollutionData) {
     show_region_emission_pie(ndx);
 
     show_region_selector(ndx);
+    
+    show_country_selector(ndx);
 
     show_eu_barchart(ndx);
     
     show_death_v_gdp_correlation(ndx);
 
     show_average_death_rate(ndx);
+    
+  /*  show_emission_above_rate_pie(ndx); */
     
 
  /*   show_country_death_toll(ndx); */
@@ -29,6 +33,15 @@ function show_region_selector(ndx) {
     group = dim.group()
 
     dc.selectMenu("#region-selector")
+        .dimension(dim)
+        .group(group);
+}
+
+function show_country_selector(ndx) {
+    dim = ndx.dimension(dc.pluck("Country"));
+    group = dim.group()
+    
+    dc.selectMenu("#country-selector")
         .dimension(dim)
         .group(group);
 }
@@ -78,6 +91,7 @@ function show_region_emission_pie(ndx) {
         .externalLabels(20)
         .drawPaths(true)
         .minAngleForLabel(0);
+        
 }
 
 function show_eu_barchart(ndx) {
@@ -203,7 +217,31 @@ function show_average_death_rate(ndx) {
         .yAxis().ticks(8);
 }
 
+/* function show_emission_above_rate_pie(ndx) {
+    var dim = ndx.dimension(dc.pluck("Country"));
+    var emiss_dimension = ndx.dimension(function (d) {
+            if (d.emissionsC > 300)
+                return "300 and above";
+            else
+                return "Below 300"
+        });
+        var emiss_group = size_dimension.group();
+        
+        dc.pieChart('#above-pie-chart')
+            .height(330)
+            .radius(90)
+            .dimension(emiss_dimension)
+            .group(emiss_group);
+        dc.renderAll();
+    }
+*/
+
 /*
+
+
+function show_country_death_as_percentage_of_pop(ndx) {
+    
+}
 
 function show_country_death_toll(ndx) {
     var timeDim = ndx.dimension(dc.pluck("Deaths"));

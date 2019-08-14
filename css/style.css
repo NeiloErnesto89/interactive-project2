@@ -62,9 +62,15 @@
     margin-top: 10px;
     float: left;
     height: 10px;
-  
+   
+}
+
+.country-selector {
     
-    
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+    height: 10px;
 }
 
 /* GRAPH LABELS */
@@ -77,6 +83,12 @@
     
     /*formerly -12px, 22px (-90deg)*/
 }
+
+#average_death_rate .axis.x > .tick > text  {
+    
+    text-align: right;
+    font-size: 8.2px;
+    transform: translate(-12px, 8px) rotate(-30deg);
 
 
 /*
