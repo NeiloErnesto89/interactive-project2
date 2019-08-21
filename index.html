@@ -63,132 +63,138 @@
 
         </header>
 
-
-
         <hr>
 
         <div class="container-fluid">
 
             <div class="row justify-content">
-
-
                 <div class="col-md-12 text-center">
                     <h1 class="mainheader">EU Pollution Index Calculator</h1>
                     <p class="underhead text-center"><i>This following statistical analyse is focused on the effects on air pollution, Co2 emissions and mortality rates from within the European Union</i></p>
                 </div>
             </div>
-
         </div>
+
+
 
         <hr>
 
-        <div class="container-fluid">
 
-            <h2 class="regional-line">Global Co2 Emissions Overview </h2>
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h2 class="regional-line">EU in Numbers </h2>
+                <p class="underhead text-center"><i>The following stats show some pertient information within the EU</i></p>
+            </div>
 
-            <p class="underhead text-center"><i>This section focuses on global Co2 emissions and is broken into continental regions</i></p>
 
-
-            <div class="row justify-content-center">
-                <div class="chart-wrapper">
+            <span class="number-box">
                     
-            <div class="regional-selector" id="region-selector">
-                            </div>
+                    <h4>EU population</h4>
 
-                    <div class="col-md-12" id="region-pie-chart">
-                       
-                    </div>
-                </div>
-            </div>
+                    <div id="eu-population"> </div>
+                    
+                </span>
 
-            <div class="row justify-content-center">
-                <div class="chart-wrapper">
 
-                    <div class="col-md-12" id="pollution-chart">
+            <span class="number-box text-center">
+                    
+                    <h4>EU Total Co2 Emissions (billion tonnes)</h4>
 
-                    </div>
 
-                </div>
+                    <div class="text-center" id="eu-total_emission"> </div>
 
-            </div>
+              </span>
+
         </div>
 
         <hr>
-
-        <h2 class="regional-line">EU Co2 Emissions Charts </h2>
-
-        <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
 
         <div class="row justify-content-center">
 
+            <div class="col-12 text-center">
+
+                <h2 class="regional-line">EU Co2 Emissions Charts </h2>
+
+                <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
+
+            </div>
+
+
             <div class="chart-wrapper">
 
-                <div class="country-selector" id="country-selector">
+                <div class="col-12 text-center">
+
+
+
+                    <div class="country-selector" id="country-selector"></div>
+
+
+                    <div class="text-center" id="eu-pollution-chart"> </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-12">
+
+                <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+
+                <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+
+            </div>
+
+            <div class="chart-wrapper">
+
+                <div class="col-12 text-center">
+
+                    <div id="death-v-gdp-plot">
+
+                    </div>
 
                 </div>
 
-                <div class="col-md-12" id="eu-pollution-chart"> </div>
-
             </div>
+
+
+
         </div>
 
         <hr>
 
-        <div class="container-fluid">
-
-            <div class="row justify-content">
 
 
-                <div class="col-md-12">
+        <div class="row justify-content-center">
 
-                    <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+            <div class="col-md-12">
 
-                    <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€)</i></p>
+                <h2 class="regional-pie text-center">EU Country Co2 Emission Levels(2017)</h2>
 
-
-                    <div class="chart-wrapper">
-
-                        <div id="death-v-gdp-plot">
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
 
             </div>
 
-            <div class="row justify-content">
+            <div class="chart-wrapper">
 
 
-                <div class="col-md-12">
 
-                    <h2 class="regional-pie text-center"> EU Death Rate from Air Pollution as a percentage population</h2>
-
-                    <p class="underhead text-center"><i>Average death rate directly attributed to pollution, data taken between the years 2015-2017</i></p>
-
-
-                    <div class="chart-wrapper">
-                        
-                      <!--  <div id="above_pie-chart"></div> -->
-
-                      <!--  <div id="average-death_rate"> -->
-
-                        </div>
-
-                    </div>
+                <div class="col-12" id="country-pie-chart">
 
                 </div>
-
             </div>
-
-
-
-
-
-
         </div>
-        <!--container fluid -->
+
+
+    </div>
+    <!--container fluid -->
 
     </div>
     <!--cover -->
