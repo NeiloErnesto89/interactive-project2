@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pollution Index</title>
+    <title>EU Pollution Index</title>
 
     <!-- Bootstrap-->
 
@@ -118,79 +118,92 @@
                 <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
 
             </div>
-
-
-            <div class="chart-wrapper">
-
-                <div class="col-12 text-center">
-
-
-
-                    <div class="country-selector" id="country-selector"></div>
-
-
-                    <div class="text-center" id="eu-pollution-chart"> </div>
-
-                </div>
-            </div>
-
         </div>
-
-
-        <hr>
-
-
-
 
         <div class="row justify-content-center">
 
-            <div class="col-md-12">
+            <div class="chart-wrapper">
+                
+                <div id="country-selector"></div> <!--class="country-selector"-->
+                
+            </div>
+        </div>
 
-                <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+    
 
-                <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+
+
+    <div class="row justify-content-center">
+
+        <div class="chart-wrapper">
+
+            <div class="col-12 text-center">
+
+
+
+                <div class="text-center" id="eu-pollution-chart"></div>
 
             </div>
+        </div>
 
-            <div class="chart-wrapper">
+    </div>
 
-                <div class="col-12 text-center">
 
-                    <div id="death-v-gdp-plot">
 
-                    </div>
+    <hr>
+
+
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-12">
+
+            <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+
+            <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+
+        </div>
+
+        <div class="chart-wrapper">
+
+            <div class="col-12 text-center">
+
+                <div id="death-v-gdp-plot">
 
                 </div>
 
             </div>
 
+        </div>
 
+
+
+    </div>
+
+    <hr>
+
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-12">
+
+            <h2 class="regional-pie text-center">EU Country Co2 Emission Levels(2017)</h2>
+
+            <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
 
         </div>
 
-        <hr>
+        <div class="chart-wrapper">
 
 
 
-        <div class="row justify-content-center">
+            <div class="col-12" id="country-pie-chart">
 
-            <div class="col-md-12">
-
-                <h2 class="regional-pie text-center">EU Country Co2 Emission Levels(2017)</h2>
-
-                <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
-
-            </div>
-
-            <div class="chart-wrapper">
-
-
-
-                <div class="col-12" id="country-pie-chart">
-
-                </div>
             </div>
         </div>
+    </div>
 
 
     </div>

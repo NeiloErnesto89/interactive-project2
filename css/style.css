@@ -57,12 +57,11 @@
 }
 
 .chart-wrapper {
-    max-width: 960px;
-    padding-right: 10px;
-    padding-left: 10px;
+    /*  max-width: 960px; */
+    margin: 10px;
+    padding: 15px;
     border-radius: 5px;
     background-color: rgba(28, 163, 42, 0.3);
-    margin: 15px;
     text-align: center;
     display: flex;
 }
@@ -88,6 +87,7 @@
 
 }
 
+/*
 .country-selector {
 
     margin-bottom: 10px;
@@ -95,6 +95,8 @@
     float: left;
     height: 10px;
 }
+
+*/
 
 /* GRAPH LABELS */
 
