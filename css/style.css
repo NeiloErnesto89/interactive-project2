@@ -17,6 +17,14 @@
     overflow-x: hidden;
 }
 
+.container-fluid {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 .mainheader {
     color: green;
@@ -24,6 +32,16 @@
 
 .underhead {
     color: green;
+}
+
+button {
+    margin: 5px;
+    color: white;
+    background-color: green;
+    width: 130px;
+    height: 65px;
+    line-height: 30px;
+    font-weight: bold;
 }
 
 .hr {
@@ -68,15 +86,17 @@
 
 .number-box {
     margin: 10px;
-    font-size: 10px;
+    font-size: 30px;
     border: 2px solid #e5d9d9;
     border-radius: 15px;
-    background-color: #e5d9d9;
-    color: #1a1616;
+    background-color: green;
+    color: white;
     padding: 10px;
     text-align: center;
 
 }
+
+
 
 .regional-selector {
 

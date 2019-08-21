@@ -25,6 +25,8 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
     show_death_v_gdp_correlation(ndx);
 
     show_country_emission_pie(ndx);
+    
+    show_yearly_plastic_waste_pie(ndx); 
 
 
     dc.renderAll();
@@ -183,4 +185,32 @@ function show_country_emission_pie(ndx) {
         .gap(5)
     );
        /* .legend(dc.legend().x(270).y(0).itemHeight(8).gap(5));*/
+}
+
+
+function show_yearly_plastic_waste_pie(ndx) {
+        var area_dim = ndx.dimension(dc.pluck('Country'));
+    var yearly_plastic_pie = area_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
+
+    dc.pieChart("#yearly-plastic-pie")
+        .width(425)
+        .height(450)
+        .innerRadius(40)
+        .externalRadiusPadding(45)
+        .transitionDuration(1500)
+        .dimension(area_dim)
+        .group(yearly_plastic_pie)
+        .externalLabels(20)
+        .drawPaths(true)
+        .minAngleForLabel(0)
+        .cap(9)
+        .legend(
+      dc
+        .legend()
+        .x(365)
+        .y(15)
+        .horizontal(false)
+        .itemHeight(5)
+        .gap(5)
+    );
 }

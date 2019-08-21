@@ -48,7 +48,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/">Air Pollution</a>
+                            <a class="nav-link" href="#country-selector">EU Country Selector</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Co2 Scores</a>
@@ -71,23 +71,27 @@
                 <div class="col-md-12 text-center">
                     <h1 class="mainheader">EU Pollution Index Calculator</h1>
                     <p class="underhead text-center"><i>This following statistical analyse is focused on the effects on air pollution, Co2 emissions and mortality rates from within the European Union</i></p>
+
+                    <hr>
+
+                    <button onclick="displayAlert()">Added Information</button>
+
+                    <hr>
+
                 </div>
             </div>
-        </div>
 
 
 
-        <hr>
+
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h2 class="regional-line">EU in Numbers </h2>
+                    <p class="underhead text-center"><i>The following stats show some pertient information within the EU</i></p>
+                </div>
 
 
-        <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-                <h2 class="regional-line">EU in Numbers </h2>
-                <p class="underhead text-center"><i>The following stats show some pertient information within the EU</i></p>
-            </div>
-
-
-            <span class="number-box">
+                <span class="number-box">
                     
                     <h4>EU population</h4>
 
@@ -96,7 +100,7 @@
                 </span>
 
 
-            <span class="number-box text-center">
+                <span class="number-box text-center">
                     
                     <h4>EU Total Co2 Emissions (billion tonnes)</h4>
 
@@ -105,109 +109,107 @@
 
               </span>
 
-        </div>
-
-        <hr>
-
-        <div class="row justify-content-center">
-
-            <div class="col-12 text-center">
-
-                <h2 class="regional-line">EU Co2 Emissions Charts </h2>
-
-                <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
-
             </div>
-        </div>
 
-        <div class="row justify-content-center">
+            <hr>
 
-            <div class="chart-wrapper">
-                
-                <div id="country-selector"></div> <!--class="country-selector"-->
-                
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center">
+
+                    <h2 class="regional-line">EU Co2 Emissions Charts </h2>
+
+                    <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
+
+                </div>
             </div>
-        </div>
 
-    
+            <div class="row justify-content-center">
 
+                <div class="chart-wrapper">
 
+                    <div id="country-selector"></div>
 
-    <div class="row justify-content-center">
-
-        <div class="chart-wrapper">
-
-            <div class="col-12 text-center">
-
-
-
-                <div class="text-center" id="eu-pollution-chart"></div>
-
+                </div>
             </div>
-        </div>
-
-    </div>
-
-
-
-    <hr>
 
 
 
 
-    <div class="row justify-content-center">
 
-        <div class="col-md-12">
+            <div class="row justify-content-center">
 
-            <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+                <div class="chart-wrapper">
 
-            <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+                    <!--    <div class="col-12 text-center"> -->
 
-        </div>
+                    <div class="col-12 col-lg-6" id="eu-pollution-chart"></div>
 
-        <div class="chart-wrapper">
+                </div>
 
-            <div class="col-12 text-center">
+                <div class="chart-wrapper">
 
-                <div id="death-v-gdp-plot">
+                    <div class="col-12 col-lg-6" id="country-pie-chart"></div>
+
+                    <!--  </div> -->
 
                 </div>
 
             </div>
 
-        </div>
 
 
 
-    </div>
+            <div class="row justify-content-center">
 
-    <hr>
+                <div class="col-md-12">
+
+                    <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
+
+                    <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+
+                </div>
+
+                <div class="chart-wrapper">
+
+                    <div class="col-12 text-center">
+
+                        <div id="death-v-gdp-plot">
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
-
-    <div class="row justify-content-center">
-
-        <div class="col-md-12">
-
-            <h2 class="regional-pie text-center">EU Country Co2 Emission Levels(2017)</h2>
-
-            <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
-
-        </div>
-
-        <div class="chart-wrapper">
-
-
-
-            <div class="col-12" id="country-pie-chart">
 
             </div>
+
+            <hr>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-12">
+
+                    <h2 class="regional-pie text-center">Yearly Plastic Waste Generation per Capita (kgs)</h2>
+
+                    <p class="underhead text-center"><i>This piechart doesnt take into account the waste disposal methods.<br> This piechart doesnt take into account the waste disposal methods such as recycling which reduce overall palstic waste generation.</i></p>
+
+                </div>
+
+                <div class="chart-wrapper">
+
+                    <div class="col-sm-12 col-md-offset-6" id="yearly-plastic-pie"></div>
+
+                </div>
+            </div>
+
+
         </div>
-    </div>
-
-
-    </div>
-    <!--container fluid -->
+        <!--container fluid -->
 
     </div>
     <!--cover -->
@@ -217,7 +219,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script>
+        function displayAlert() {
+            let today = new Date();
+            let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            alert("Hello visitor ! The time is now: " + time + " and welcome to the EU Pollution Index!");
+        }
+    </script>
 </body>
 
 </html>
