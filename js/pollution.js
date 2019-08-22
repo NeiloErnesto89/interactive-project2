@@ -7,16 +7,16 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
 
 
     var ndx = crossfilter(euData);
-    
-   /* var total_deaths_percent = reduceAvg(ndx, "DeathsTotal");*/
-    
+
+    /* var total_deaths_percent = reduceAvg(ndx, "DeathsTotal");*/
+
     // charts
-    
+
     show_eu_population(ndx);
-    
+
     show_eu_emission_total(ndx);
-    
-   /* show_total_deaths(ndx, total_deaths_percent);*/
+
+    /* show_total_deaths(ndx, total_deaths_percent);*/
 
     show_country_selector(ndx);
 
@@ -25,11 +25,11 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
     show_death_v_gdp_correlation(ndx);
 
     show_country_emission_pie(ndx);
-    
-    show_yearly_plastic_waste_pie(ndx); 
-    
+
+    show_yearly_plastic_waste_pie(ndx);
+
     show_plastic_waste_dim(ndx);
-    
+
     show_waste_gdp_line(ndx);
 
 
@@ -40,29 +40,31 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
 
 
 function show_eu_population(ndx) {
-	var populationGroup = ndx.groupAll().reduceSum(function(d) {
-		return d.Population;
-	});
-	var populationNum = dc.numberDisplay("#eu-population");
+    var populationGroup = ndx.groupAll().reduceSum(function(d) {
+        return d.Population;
+    });
+    var populationNum = dc.numberDisplay("#eu-population");
 
-	populationNum
-		.group(populationGroup)
-		.valueAccessor(function(d) {
-			return d;
-		});
+    populationNum
+        .group(populationGroup)
+        .valueAccessor(function(d) {
+            return d;
+        });
 }
 
 function show_eu_emission_total(ndx) {
-	var emissionGroup = ndx.groupAll().reduceSum(function(d) {
-		return d.EmissionsC;
-	});
-	var totalEmissNum = dc.numberDisplay("#eu-total_emission");
+    var emissionGroup = ndx.groupAll().reduceSum(function(d) {
+        return d.EmissionsC;
+    });
+    var totalEmissNum = dc.numberDisplay("#eu-total_emission");
+    var numFormat = d3.format(",.2r");
 
-	totalEmissNum
-		.group(emissionGroup)
-		.valueAccessor(function(d) {
-			return d;
-		});
+    totalEmissNum
+        .formatNumber(numFormat)
+        .group(emissionGroup)
+        .valueAccessor(function(d) {
+            return d;
+        });
 }
 
 /*
@@ -137,10 +139,10 @@ function show_death_v_gdp_correlation(ndx) {
 
 
     dc.scatterPlot("#death-v-gdp-plot")
-        .width(650)
+        .width(600)
         .height(400)
-       /* height(window.innerHeight - 300)
-        .width(window.innerWidth - 65 % window)*/
+        /* height(window.innerHeight - 300)
+         .width(window.innerWidth - 65 % window)*/
         .x(d3.scale.linear().domain([minGdpDeathRate, maxGdpDeathRate])) /* as gdp is numerical i.e. 10 is more than 9 */
         .brushOn(false)
         .symbolSize(6)
@@ -156,7 +158,7 @@ function show_death_v_gdp_correlation(ndx) {
         .colors(nationColors)
         .dimension(deathCoDim)
         .group(gdpAndDeathGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .margins({ top: 10, right: 50, bottom: 50, left: 50 })
         .xAxis().ticks(5);
 
 
@@ -180,25 +182,29 @@ function show_country_emission_pie(ndx) {
         .minAngleForLabel(0)
         .cap(5)
         .legend(
-      dc
-        .legend()
-        .x(395)
-        .y(20)
-        .horizontal(false)
-        .itemHeight(5)
-        .gap(5)
-    );
-       /* .legend(dc.legend().x(270).y(0).itemHeight(8).gap(5));*/
+            dc
+            .legend()
+            .x(395)
+            .y(20)
+            .horizontal(false)
+            .itemHeight(5)
+            .gap(5)
+        );
+    /* .legend(dc.legend().x(270).y(0).itemHeight(8).gap(5));*/
 }
 
 
 function show_yearly_plastic_waste_pie(ndx) {
-        var area_dim = ndx.dimension(dc.pluck('Country'));
+    var area_dim = ndx.dimension(dc.pluck('Country'));
     var yearly_plastic_pie = area_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
+    /*var pieNumFormat = d3.format(".0%");*/
+
+        
 
     dc.pieChart("#yearly-plastic-pie")
         .width(425)
-        .height(450)
+        .height(500)
+      /*  .formatNumber(pieNumFormat) */
         .innerRadius(40)
         .externalRadiusPadding(45)
         .transitionDuration(1500)
@@ -209,59 +215,117 @@ function show_yearly_plastic_waste_pie(ndx) {
         .minAngleForLabel(0)
         .cap(9)
         .legend(
-      dc
-        .legend()
-        .x(365)
-        .y(15)
-        .horizontal(false)
-        .itemHeight(5)
-        .gap(5)
-    );
+            dc
+            .legend()
+            .x(365)
+            .y(15)
+            .horizontal(false)
+            .itemHeight(5)
+            .gap(5)
+        );
 }
 
 
-    function show_plastic_waste_dim(ndx) {
-        
-        var plastic_dimension = ndx.dimension(function (d) {
-            if (d.PlasticWasteYearly > 50)
-                return "+ 50kgs per person";
-            else
-                return "- 50kgs per person"
-        });
-        
-        var plastic_group = plastic_dimension.group();
-        
-        
-        dc.pieChart('#yearly-plastic-dim')
-            .height(380)
-            .width(350)
-            .radius(110)
-            .dimension(plastic_dimension)
-            .group(plastic_group);
-    
-    }
-    
-    function show_waste_gdp_line(ndx) {
-        
-       /*  var parseGDP = d3.format(toFixed(4)).parse;
-        euData.forEach(function(d){
-            d.GDP = parseGDP(d.GDP);
-        }); */
-        
-        var gdp_dim = ndx.dimension(dc.pluck('GDP'));
-        var total_plastic_v_gdp = gdp_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
-        var minGDP = gdp_dim.bottom(1)[0].GDP;
-        var maxGDP = gdp_dim.top(1)[0].GDP;
+function show_plastic_waste_dim(ndx) {
 
-        dc.lineChart("#waste-gdp-line")
-            .width(600)
-            .height(300)
-            .margins({top: 10, right: 50, bottom: 30, left: 50})
-            .dimension(gdp_dim)
-            .group(total_plastic_v_gdp)
-            .transitionDuration(500)
-            .x(d3.time.scale().domain([minGDP,maxGDP]))
-            .xAxisLabel("GDP")
-            .yAxisLabel("Yearly Plastic Generation per Capita (kg)")
-            .yAxis().ticks(5);
+    var plastic_dimension = ndx.dimension(function(d) {
+        if (d.PlasticWasteYearly > 50)
+            return "+ 50kgs per person";
+        else
+            return "- 50kgs per person"
+    });
+
+    var plastic_group = plastic_dimension.group();
+
+
+    dc.pieChart('#yearly-plastic-dim')
+        .height(380)
+        .width(350)
+        .radius(110)
+        .dimension(plastic_dimension)
+        .group(plastic_group);
+
+}
+
+function show_waste_gdp_line(ndx) {
+
+
+    var gdp_dim = ndx.dimension(dc.pluck('GDP'));
+    var total_plastic_v_gdp = gdp_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
+    var minPlasticGDP = gdp_dim.bottom(1)[0].GDP;
+    var maxPlasticGDP = gdp_dim.top(1)[0].GDP;
+
+    dc.lineChart("#waste-gdp-line")
+        .width(600)
+        .height(300)
+        .margins({ top: 10, right: 50, bottom: 40, left: 50 })
+        .dimension(gdp_dim)
+        .group(total_plastic_v_gdp)
+        .transitionDuration(500)
+        .x(d3.scale.linear().domain([minPlasticGDP, maxPlasticGDP]))
+        .elasticY(false)
+        .elasticX(false)
+        .xAxisLabel("GDP  (€)")
+        .yAxisLabel("Yearly Plastic Generation per Capita (kg)")
+        .yAxis().ticks(5);
+}
+/*
+function show_rank_distribution(ndx) {
+    
+
+function rankByGender (dimension, rank) {
+        return dimension.group().reduce(
+            function (p, v) {
+                p.total++;
+                if(v.rank == rank) {
+                    p.match++;
+                }
+                return p;
+            },
+            function (p, v) {
+                p.total--;
+                if(v.rank == rank) {
+                    p.match--;
+                }
+                return p;
+            },
+            function () {
+                return {total: 0, match: 0};
+            }
+        );
     }
+    
+    
+        
+        
+
+    var  dim = ndx.dimension(dc.pluck('Country'));
+    var profByGender = rankByGender(dim, "Prof");
+    var asstProfByGender = rankByGender(dim, "AsstProf");
+    var assocProfByGender = rankByGender(dim, "AssocProf");
+    
+    //  console.log(profByGender.all());
+    
+    dc.barChart("#rank-distribution")
+        .width(350)
+        .height(250)
+        .dimension(dim)
+        .group(profByGender, "Prof")
+        .stack(asstProfByGender, "Asst Prof")
+        .stack(assocProfByGender, "Assoc Prof")
+        .valueAccessor(function(d) {
+            if(d.value.total > 0) {
+                return (d.value.match / d.value.total) * 100; // to get % of match 
+            } else {
+                return 0;
+            }
+        })
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Gender")
+        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 30, left: 30});
+    
+}
+
+*/
