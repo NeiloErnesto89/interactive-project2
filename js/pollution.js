@@ -27,6 +27,10 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
     show_country_emission_pie(ndx);
     
     show_yearly_plastic_waste_pie(ndx); 
+    
+    show_plastic_waste_dim(ndx);
+    
+    show_waste_gdp_line(ndx);
 
 
     dc.renderAll();
@@ -214,3 +218,50 @@ function show_yearly_plastic_waste_pie(ndx) {
         .gap(5)
     );
 }
+
+
+    function show_plastic_waste_dim(ndx) {
+        
+        var plastic_dimension = ndx.dimension(function (d) {
+            if (d.PlasticWasteYearly > 50)
+                return "+ 50kgs per person";
+            else
+                return "- 50kgs per person"
+        });
+        
+        var plastic_group = plastic_dimension.group();
+        
+        
+        dc.pieChart('#yearly-plastic-dim')
+            .height(380)
+            .width(350)
+            .radius(110)
+            .dimension(plastic_dimension)
+            .group(plastic_group);
+    
+    }
+    
+    function show_waste_gdp_line(ndx) {
+        
+       /*  var parseGDP = d3.format(toFixed(4)).parse;
+        euData.forEach(function(d){
+            d.GDP = parseGDP(d.GDP);
+        }); */
+        
+        var gdp_dim = ndx.dimension(dc.pluck('GDP'));
+        var total_plastic_v_gdp = gdp_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
+        var minGDP = gdp_dim.bottom(1)[0].GDP;
+        var maxGDP = gdp_dim.top(1)[0].GDP;
+
+        dc.lineChart("#waste-gdp-line")
+            .width(600)
+            .height(300)
+            .margins({top: 10, right: 50, bottom: 30, left: 50})
+            .dimension(gdp_dim)
+            .group(total_plastic_v_gdp)
+            .transitionDuration(500)
+            .x(d3.time.scale().domain([minGDP,maxGDP]))
+            .xAxisLabel("GDP")
+            .yAxisLabel("Yearly Plastic Generation per Capita (kg)")
+            .yAxis().ticks(5);
+    }
