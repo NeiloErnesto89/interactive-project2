@@ -129,7 +129,7 @@ button {
     /*formerly -12px, 22px (-90deg)*/
 }
 
-#average_death_rate .axis.x>.tick>text {
+#eu-per_cap-chart .axis.x>.tick>text {
 
     text-align: right;
     font-size: 8.2px;

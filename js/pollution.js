@@ -31,6 +31,8 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
     show_plastic_waste_dim(ndx);
 
     show_waste_gdp_line(ndx);
+    
+    show_eu_per_cap_barchart(ndx); 
 
 
     dc.renderAll();
@@ -104,7 +106,7 @@ function show_eu_barchart(ndx) {
     dc.barChart("#eu-pollution-chart")
         .width(500)
         .height(550)
-        .margins({ top: 20, right: 40, bottom: 40, left: 40 })
+        .margins({ top: 20, right: 40, bottom: 50, left: 40 })
         .dimension(country_dim)
         .group(total_emissions)
         .transitionDuration(500)
@@ -114,12 +116,45 @@ function show_eu_barchart(ndx) {
         .colorAccessor(function(d) {
             return d.key[0];
         })
-        /*.xAxisLabel("Countries")*/
+        .xAxisLabel("Countries")
         .yAxisLabel("Co2 Emission Level (million tonnes)")
         .yAxis().ticks(7);
 
 
 }
+
+
+
+function show_eu_per_cap_barchart(ndx) {
+    var nation_dim = ndx.dimension(dc.pluck("Country"));
+    var total_emissions_per = nation_dim.group().reduceSum(dc.pluck('EmissionsPerCap'));
+
+    var nationColors = d3.scale.ordinal()
+        .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
+        .range(["Red", "#15EE68", "red", "Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
+
+
+    dc.barChart("#eu-per_cap-chart")
+        .width(500)
+        .height(450)
+        .margins({ top: 20, right: 30, bottom: 50, left: 30 })
+        .dimension(nation_dim)
+        .group(total_emissions_per)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .colors(nationColors)
+        .colorAccessor(function(d) {
+            return d.key[0];
+        })
+        .xAxisLabel("Countries")
+        .yAxisLabel("Per Capita Co2 Emissions (tonnes)")
+        .yAxis().ticks(7);
+
+
+}
+
+
 
 
 function show_death_v_gdp_correlation(ndx) {
