@@ -15,9 +15,16 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
     <!-- Font Awesome-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <!--DC.min CSS -->
 
     <link rel="stylesheet" href="css/dc.min.css" type="text/css" />
+    
+    <!-- CSS -->
 
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
@@ -41,7 +48,7 @@
         <header class="container-fluid">
 
             <nav class="navbar navbar-expand-lg navbar-light mb-1 text-center">
-                <a class="navbar-brand" href="index.html"><i class="fas fa-leaf">Home</i></a>
+                <a class="navbar-brand" href="#eu-total_emission"><i class="fas fa-globe-europe" style="font-size:45px;color:green;"></i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
@@ -51,10 +58,10 @@
                             <a class="nav-link" href="#country-selector">EU Country Selector</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Co2 Scores</a>
+                            <a class="nav-link" href="#death-v-gdp-plot">Death v GDP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Regional</a>
+                            <a class="nav-link" href="#yearly-plastic-pie"">Yearly Plastic Waste Generation</a>
                         </li>
 
                     </ul>
@@ -72,11 +79,12 @@
                     <h1 class="mainheader">EU Pollution Index Calculator</h1>
                     <p class="underhead text-center"><i>This following statistical analyse is focused on the 28 nation European Union, compiling some of the data available to evaluate the effects on air pollution, Co2 emissions and mortality rates as well as GDP from within these nations</i></p>
 
-                    <hr>
-
-                    <button onclick="displayAlert()">Added Information</button>
-
-                    <hr>
+                    <!--   Button Test   
+                        <hr>
+                        
+                        <button onclick="displayAlert()">Added Information</button>
+                        
+                        <hr> -->
 
                 </div>
             </div>
@@ -143,6 +151,12 @@
 
                     <!--    <div class="col-12 text-center"> -->
 
+                    <!--     <div class="row">
+                    
+                        <h5 class="wrapper-head col-12">EU Pollution Chart</h5>
+                    
+                    </div> -->
+
                     <div class="col-12 col-lg-4" id="eu-pollution-chart"></div>
 
                 </div>
@@ -154,8 +168,8 @@
                     <!--  </div> -->
 
                 </div>
-                
-                
+
+
                 <div class="chart-wrapper">
 
                     <div class="col-sm-12 col-lg-4" id="eu-per_cap-chart"></div>
@@ -192,8 +206,8 @@
 
 
             </div>
-            
-              <div class="row justify-content-center">
+
+            <div class="row justify-content-center">
 
                 <div class="col-md-12">
 
@@ -202,13 +216,13 @@
                     <p class="underhead text-center"><i>This chart looks into the correlation between the weath of a nation and the per capita plastic waste generation. Does having more disposal income make you more prone to plastic waste generation</i></p>
 
                 </div>
-                
-                 <div class="chart-wrapper">
+
+                <div class="chart-wrapper">
 
                     <div class="col-md-offset-5" id="waste-gdp-line"></div>
 
                 </div>
-                
+
             </div>
 
             <hr>
@@ -230,26 +244,49 @@
                     <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-pie"></div>
 
                 </div>
-                
-                 <div class="chart-wrapper">
+
+                <div class="chart-wrapper">
 
                     <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-dim"></div>
 
                 </div>
             </div>
-            
-               
-            </div>
-
-            
-            
-          
 
 
         </div>
-        <!--container fluid -->
 
-        <!-- FOOTER -->
+
+
+
+
+
+    </div>
+    <!--container fluid -->
+
+    <!-- FOOTER -->
+
+    <!--MODAL POPUP-->
+
+    <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog" aria-labelledby="popUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popUpModalLabel"><i>Welcome to the EU Pollution Index</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body"><i>
+                    The following site is aimed at visualing some of the European Unions most signifgant statistical facts with regards to pollution within the 28 nations of the EU.</i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL POPUP-->
 
 
     </div>
@@ -260,13 +297,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
+    <!-- <script>
         function displayAlert() {
             let today = new Date();
             let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             alert("Hello visitor ! The time is now: " + time + " and welcome to the EU Pollution Index!");
         }
-    </script>
+    </script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -25,6 +25,9 @@
     margin-left: auto;
 }
 
+.nav-icon {
+    font-size: 20px; 
+}
 
 .mainheader {
     color: green;
@@ -137,7 +140,9 @@ button {
 
 }
 
-
+.modal {
+    color: black;
+}
 
 
 /*
