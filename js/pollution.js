@@ -100,7 +100,7 @@ function show_eu_barchart(ndx) {
 
     var countryColors = d3.scale.ordinal()
         .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
-        .range(["Red", "#15EE68", "red", "Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
+        .range(["Pink", "Green", "Orange", "Yellow", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "OrangeRed", "Lemon", "FireBrick", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
 
 
     dc.barChart("#eu-pollution-chart")
@@ -131,7 +131,7 @@ function show_eu_per_cap_barchart(ndx) {
 
     var nationColors = d3.scale.ordinal()
         .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
-        .range(["Red", "#15EE68", "red", "Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
+        .range(["red", "pink", "blue", "green", "Brown", "Purple", "Orange", "yellow", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
 
 
     dc.barChart("#eu-per_cap-chart")

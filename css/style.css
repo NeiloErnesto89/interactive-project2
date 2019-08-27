@@ -26,8 +26,29 @@
 }
 
 .nav-icon {
-    font-size: 20px; 
+    font-size: 20px;
 }
+
+/*.sticky {
+    position: -webkit-sticky;
+    position: ;
+}*/
+
+#reset-button {
+    color: #3d7a59;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 5px;
+    padding: 5px;
+    position: fixed;
+    bottom: 5px;
+    right: 2px;
+    z-index: 1;
+    opacity: 0.9;
+    /*  position: fixed; */
+}
+
+
 
 .mainheader {
     color: green;
