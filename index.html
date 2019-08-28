@@ -40,7 +40,7 @@
 
 </head>
 
-<body onresize="myFunction()">
+<body>
 
     <div class="cover-container d-flex mx-auto flex-column">
 
@@ -105,7 +105,7 @@
                     <h2 class="regional-line">EU in Numbers </h2>
                     <p class="underhead text-center"><i>The following stats show some pertient information within the EU</i></p>
                     
-                   <!-- <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Click</button> -->
+                   
                 </div>
 
 
@@ -124,7 +124,7 @@
                     <p class="emissions-box"><i>(Billion Tonnes)*</i></p>
 
 
-                    <div class="emission-figure text-center"  id="eu-total_emission" > </div>
+                    <div id="eu-total_emission" > </div>
 
               </span>
 
@@ -148,6 +148,13 @@
                 <div class="chart-wrapper">
 
                     <div id="country-selector"></div>
+                    
+                    
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Click the select all box to chose the country">
+                  <button class="btn btn-sm mini-button" style="pointer-events: none; font-size:15px;color:green;" type="button" disabled><i class="fas fa-info" style=""></i></button>
+                </span>
+
+ 
 
                 </div>
             </div>
@@ -227,13 +234,15 @@
 
                     <h2 class="regional-pie text-center">Waste Generation v GDP </h2>
 
-                    <p class="underhead text-center"><i>This chart looks into the correlation between the weath of a nation and the per capita plastic waste generation. Does having more disposal income make you more prone to plastic waste generation</i></p>
+                    <p class="underhead text-center"><i>This chart looks into the correlation between the nominal GDP versus the per capita plastic waste generation. Does having more disposable income make people more prone to plastic waste generation?<br><b>Well, according to the results, there is a very mild correlation between "wealth" and waste but the results are somewhat erratic. It seems also to be a cultural phenomenon.</b></i></p>
 
                 </div>
 
                 <div class="chart-wrapper">
 
                     <div class="col-md-offset-5" id="waste-gdp-line"></div>
+                    
+                 <!--   <svg viewBox="0 0 370 220"></svg> -->
 
                 </div>
 
@@ -258,10 +267,23 @@
                     <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-pie"></div>
 
                 </div>
+                
+              <!--  <div class="chart-wrapper">
+
+                    <div class="col-sm-12 col-md-offset-4 " id="response-bar resize"></div>
+
+                </div> -->
 
                 <div class="chart-wrapper">
+                
+                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="This piechart is simply demonstrating the total amount of plastic waste generated, between people who produce more or less than 50kg per annum">
+                  <button class="btn btn-sm mini-button" style="pointer-events: none; font-size:15px;color:green;" type="button" disabled><i class="fas fa-info" style=""></i></button>
+                </span>
 
-                    <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-dim"></div>
+                    <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-dim">
+                    
+                
+                </div>
 
                 </div>
             </div>
@@ -269,15 +291,27 @@
 
         </div>
 
-
-
-
-
+    <!-- FOOTER -->
+    
+    <footer class="container-fluid footer"> 
+          <div class="row footer-row">
+        <div class="col-xs-12 col-sm-6">
+        <h6>Created by Neil Smyth (2019)</h6>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+        <i class="fab fa-github" style="font-size:30px;"></i>
+        </div>
+          </div>
+  
+       </footer> 
+ 
 
     </div>
     <!--container fluid -->
 
-    <!-- FOOTER -->
+    
+    
+
 
     <!--MODAL POPUP-->
 
@@ -312,21 +346,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
+    <!-- Tooltip function 
         <script>
-
             function myFunction() {
             }
-        </script>
+        </script> -->
  
-    <!-- <script>
+    <!-- Button test 
+    <script>
         function displayAlert() {
             let today = new Date();
             let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             alert("Hello visitor ! The time is now: " + time + " and welcome to the EU Pollution Index!");
         }
     </script> -->
+    
     <script src="js/script.js"></script>
     <script src="js/helper.js"></script>
+    
    <!-- <script src="js/tour.js"></script> -->
 </body>
 

@@ -1,6 +1,6 @@
 .cover-container {
     min-height: 100vh;
-    padding: 15px;
+  /*  padding: 15px; */ /* removed to faciltate footer */
     background-color: rgb(217, 255, 204);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -34,8 +34,8 @@
     margin-bottom: 2px;
 }
 
-.emission-figure {
-    text-align: center;
+div.dc-chart {
+    float: none;
 }
 
 #reset-button {
@@ -114,7 +114,7 @@ button {
 
 .number-box {
     margin: 10px;
-    font-size: 30px;
+    font-size: 35px;
     border: 2px solid #e5d9d9;
     border-radius: 15px;
     background-color: green;
@@ -124,6 +124,11 @@ button {
 
 }
 
+
+.mini-button {
+    margin: -20px;
+    padding: 2px;
+}
 
 
 .regional-selector {
@@ -135,16 +140,7 @@ button {
 
 }
 
-/*
-.country-selector {
 
-    margin-bottom: 10px;
-    margin-top: 10px;
-    float: left;
-    height: 10px;
-}
-
-*/
 
 /* GRAPH LABELS */
 
@@ -169,6 +165,21 @@ button {
     color: black;
 }
 
+/* FOOTER */
+
+.footer {
+    height: 80px;
+    margin-top: 10px;
+    background-color: #008000;
+    color: white;
+    text-align: center;
+
+}
+
+.footer-row {
+    padding: 5px;
+    margin-top: 10px;
+}
 
 /*
 #eu-pollution-chart > .x-axis-label   {
