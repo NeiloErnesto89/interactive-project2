@@ -40,7 +40,7 @@
 
 </head>
 
-<body>
+<body onresize="myFunction()">
 
     <div class="cover-container d-flex mx-auto flex-column">
 
@@ -48,7 +48,7 @@
         <header class="container-fluid">
 
             <nav class="navbar navbar-expand-lg navbar-light mb-1 text-center">
-                <a class="navbar-brand" href="#eu-total_emission"><i class="fas fa-globe-europe" style="font-size:45px;color:green;"></i></a>
+                <a class="navbar-brand" data-target="#popUpModal" data-toggle="modal"><i class="fas fa-globe-europe" style="font-size:40px;color:green;"></i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
@@ -82,7 +82,8 @@
                     
                         <hr>
                         <div class="col-offset-6 sicky">
-                         <button type="button" id="reset-button" class=" btn btn-sm btn-warning text-center">Reset Filters</button>
+                        
+                         <button type="button" id="reset-button" class=" btn btn-sm btn-warning text-center" data-toggle="tooltip" data-placement="top" title="Click here to reset the filters">Reset Filters</button>
                          </div>
                         
                      <!--   Button Test  
@@ -103,6 +104,8 @@
                 <div class="col-md-12 text-center">
                     <h2 class="regional-line">EU in Numbers </h2>
                     <p class="underhead text-center"><i>The following stats show some pertient information within the EU</i></p>
+                    
+                   <!-- <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Click</button> -->
                 </div>
 
 
@@ -117,10 +120,11 @@
 
                 <span class="number-box text-center">
                     
-                    <h4>EU Total Co2 Emissions (billion tonnes)</h4>
+                    <h4>EU Co2 Emissions</h4>
+                    <p class="emissions-box"><i>(Billion Tonnes)*</i></p>
 
 
-                    <div class="text-center" id="eu-total_emission"> </div>
+                    <div class="emission-figure text-center"  id="eu-total_emission" > </div>
 
               </span>
 
@@ -134,7 +138,7 @@
 
                     <h2 class="regional-line">EU Co2 Emissions Charts </h2>
 
-                    <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissionss</i></p>
+                    <p class="underhead text-center"><i>This section focuses on the 28 EU nations and their Co2 emissions. Each nations ‘cumulative emissions’ have been calculated for these charts.</i></p>
 
                 </div>
             </div>
@@ -194,7 +198,9 @@
 
                     <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
 
-                    <p class="underhead text-center"><i>Looking at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).<br> From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</i></p>
+                    <p class="underhead text-center"><i>According to <a href="https://ourworldindata.org/air-pollution">Our World in Data</a>, "Air pollution can be defined as the emission of harmful substances to the atmosphere". Here we look at the correlation between GDP and the death toll caused by air pollution. The following death figure is displaying the direct death toll per 100,000 people. The GDP is in euros (€).
+                    
+                    <br><b>From the findings we can see that there is a loose correlation between low GDP and higher death toll from air pollution.</b></i></p>
 
                 </div>
 
@@ -207,7 +213,8 @@
                         </div>
 
                     </div>
-
+                    
+                    
                 </div>
 
 
@@ -242,7 +249,7 @@
 
                     <h2 class="regional-pie text-center">Yearly Plastic Waste Generation per Capita (kgs)</h2>
 
-                    <p class="underhead text-center"><i>This piechart doesnt take into account the waste disposal methods.<br> This piechart doesnt take into account the waste disposal methods such as recycling which reduce overall palstic waste generation.</i></p>
+                    <p class="underhead text-center"><i>The following charts focus on per capita plastic waste generation. We can see that 9 nations generation the same amount of per capita waste as the other 19 nations.<br> *This piechart doesnt take into account the waste disposal methods such as recycling which reduce overall palstic waste generation.</i></p>
 
                 </div>
 
@@ -287,8 +294,8 @@
                     The following site is aimed at visualing some of the European Unions most signifgant statistical facts with regards to pollution within the 28 nations of the EU.</i>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Got it!</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary tour">Take a tour</button> -->
                 </div>
             </div>
         </div>
@@ -304,6 +311,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <script>
+
+            function myFunction() {
+            }
+        </script>
+ 
     <!-- <script>
         function displayAlert() {
             let today = new Date();
@@ -313,6 +327,7 @@
     </script> -->
     <script src="js/script.js"></script>
     <script src="js/helper.js"></script>
+   <!-- <script src="js/tour.js"></script> -->
 </body>
 
 </html>

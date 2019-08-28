@@ -3,12 +3,11 @@ queue()
     .await(makeGraphs);
 
 
-function makeGraphs(error, euData) { /*refering to line 4 index */
+function makeGraphs(error, euData) { 
 
 
     var ndx = crossfilter(euData);
 
-    /* var total_deaths_percent = reduceAvg(ndx, "DeathsTotal");*/
 
     // charts
 
@@ -16,7 +15,6 @@ function makeGraphs(error, euData) { /*refering to line 4 index */
 
     show_eu_emission_total(ndx);
 
-    /* show_total_deaths(ndx, total_deaths_percent);*/
 
     show_country_selector(ndx);
 
@@ -304,63 +302,3 @@ function show_waste_gdp_line(ndx) {
         .yAxisLabel("Yearly Plastic Generation per Capita (kg)")
         .yAxis().ticks(5);
 }
-/*
-function show_rank_distribution(ndx) {
-    
-
-function rankByGender (dimension, rank) {
-        return dimension.group().reduce(
-            function (p, v) {
-                p.total++;
-                if(v.rank == rank) {
-                    p.match++;
-                }
-                return p;
-            },
-            function (p, v) {
-                p.total--;
-                if(v.rank == rank) {
-                    p.match--;
-                }
-                return p;
-            },
-            function () {
-                return {total: 0, match: 0};
-            }
-        );
-    }
-    
-    
-        
-        
-
-    var  dim = ndx.dimension(dc.pluck('Country'));
-    var profByGender = rankByGender(dim, "Prof");
-    var asstProfByGender = rankByGender(dim, "AsstProf");
-    var assocProfByGender = rankByGender(dim, "AssocProf");
-    
-    //  console.log(profByGender.all());
-    
-    dc.barChart("#rank-distribution")
-        .width(350)
-        .height(250)
-        .dimension(dim)
-        .group(profByGender, "Prof")
-        .stack(asstProfByGender, "Asst Prof")
-        .stack(assocProfByGender, "Assoc Prof")
-        .valueAccessor(function(d) {
-            if(d.value.total > 0) {
-                return (d.value.match / d.value.total) * 100; // to get % of match 
-            } else {
-                return 0;
-            }
-        })
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .xAxisLabel("Gender")
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 30, left: 30});
-    
-}
-
-*/

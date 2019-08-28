@@ -21,6 +21,8 @@ My user type ideally will be curious and will follow the simple narrative of the
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 - As a user type, I want to perform an action, so that I can achieve a goal.
+- 
+
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
@@ -34,9 +36,14 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-- regional pie chart and bar chart
-- Eu country Co2 emission bar chart
-- Death v GDP scatterplot
+
+- Modal popup with welcome message: Just a simple popup with to welcome visitor to the site
+- EU in Numbers to give the user a quick insight on the size of the population in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selction. 
+- Fixed reset filter button (bottom right of the screen) so the user can simply click to refresh the chart stats.
+- EU nations barchart to show the differing levels of Co2 emssions per state. 
+- An EU emission pie chart follows to give another view of the statistics with a legened and cap, which shows that well over 50% of the emissions in the EU come from just 5 nations.
+- Following this is a per capita emissions chart, which gave a more nuanced insighted into the pollution levels in nations. 
+- Death v GDP scatterplot which I found to be an asthetically pleasing visualisation, demonstrating the loose correaltion between higher GDP and lower mortality rates due to Air Pollution.
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
@@ -56,6 +63,7 @@ Another feature idea
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - The following languages were used on this project:
+- 
     - Javascript
     - CSS
     - HTML
@@ -65,8 +73,8 @@ In this section, you should mention all of the languages, frameworks, libraries,
     -  [JQuery](https://jquery.com) (The project uses **JQuery** to simplify DOM manipulation).
     -  Crossfilter
     -  Dc.min.js
-    -  D3.min.js
-    -  queue.min.js
+    -  D3.min.js - 
+    -  queue.min.js 
     
 - The following dataset was used on this project:
     -  [Our World in Data](https://ourworldindata.org/air-pollution) I extracted Excel data from the site and simplied it as there was a mountain of detail which I felt wasn't needed for my particular site.
@@ -109,7 +117,9 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 - 
-I extracted/downloaded my files from the website - https://ourworldindata.org/air-pollution. They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project.  
+I extracted/downloaded my files from the website - https://ourworldindata.org/air-pollution. They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project.  I manipluated the charts as the information was so dense I had to extract only a small percentage of it. 
+
+
 
 ### Media
 - The photos used in this site were obtained from ...
