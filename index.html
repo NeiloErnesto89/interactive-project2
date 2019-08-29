@@ -80,7 +80,7 @@
             <div class="container mt-5">
                 <!-- removed container fluid  -->
 
-                <div class="row justify-content">
+                <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h1 class="mainheader mb-2" id="main-head">EU Pollution Index</h1>
                         <p class="underhead text-center"><i>This following statistical analyse is focused on the 28 nation European Union, compiling some of the data available on <a href="https://ourworldindata.org/air-pollution">Our World in Data</a>, to evaluate the effects on pollution within these nations</i></p>
@@ -156,54 +156,34 @@
                     </div>
                 </div>
 
-                <!--   <div class="row justify-content-center">
 
-                <div class="chart-wrapper">
 
-                    <div id="country-selector"></div>
-                    
-                    
-                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Click the select all box to chose the country">
-                  <button class="btn btn-sm mini-button" style="pointer-events: none; font-size:15px;color:green;" type="button" disabled><i class="fas fa-info" style=""></i></button>
-                </span>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
 
- 
+                        <div class="chart-wrapper">
 
+
+                            <div class="col-6" id="eu-pollution-chart"></div>
+
+                        </div>
+
+                        <div class="chart-wrapper">
+
+                            <div class="col-6" id="country-pie-chart"></div>
+
+                            <!--  </div> -->
+
+                        </div>
+                    </div>
                 </div>
-            </div> -->
-
-
-
 
 
                 <div class="row justify-content-center">
 
                     <div class="chart-wrapper">
 
-                        <!--    <div class="col-12 text-center"> -->
-
-                        <!--     <div class="row">
-                    
-                        <h5 class="wrapper-head col-12">EU Pollution Chart</h5>
-                    
-                    </div> -->
-
-                        <div class="col-12 col-lg-4" id="eu-pollution-chart"></div>
-
-                    </div>
-
-                    <div class="chart-wrapper">
-
-                        <div class="col-12 col-lg-4" id="country-pie-chart"></div>
-
-                        <!--  </div> -->
-
-                    </div>
-
-
-                    <div class="chart-wrapper">
-
-                        <div class="col-sm-12 col-lg-4" id="eu-per_cap-chart"></div>
+                        <div class="col-12" id="eu-per_cap-chart"></div>
 
                     </div>
 
@@ -260,7 +240,7 @@
                         <!--   <svg viewBox="0 0 370 220"></svg> -->
 
                     </div>
-                    
+
                     <p class="underhead text-center"><i><br><b>Well, according to the results, there is a very mild correlation between "wealth" and waste but the results are somewhat erratic. It seems also to be a cultural phenomenon.</b></i></p>
 
                 </div>
@@ -285,17 +265,11 @@
 
                     </div>
 
-                    <!--  <div class="chart-wrapper">
-
-                    <div class="col-sm-12 col-md-offset-4 " id="response-bar resize"></div>
-
-                </div> -->
+                
 
                     <div class="chart-wrapper">
-
-                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="This piechart is simply demonstrating the total amount of plastic waste generated, between people who produce more or less than 50kg per annum">
-                  <button class="btn btn-sm mini-button" style="pointer-events: none; font-size:15px;color:green;" type="button" disabled><i class="fas fa-info" style=""></i></button>
-                </span>
+                        
+                    
 
                         <div class="col-sm-12 col-md-offset-4" id="yearly-plastic-dim">
 
@@ -303,6 +277,13 @@
                         </div>
 
                     </div>
+                    
+                <div class="chart-wrapper">
+
+                <div class="col-12 " id="row-chart"></div>
+
+                </div> 
+                
                 </div>
 
 

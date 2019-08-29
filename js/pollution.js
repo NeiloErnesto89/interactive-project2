@@ -30,6 +30,8 @@ function makeGraphs(error, euData) {
     show_waste_gdp_line(ndx);
 
     show_eu_per_cap_barchart(ndx);
+    
+    show_row_chart(ndx); 
 
 
 
@@ -113,9 +115,9 @@ function show_eu_barchart(ndx) {
 
 
     dc.barChart("#eu-pollution-chart")
-        .width(500)
+        .width(450)
         .height(550)
-        .margins({ top: 20, right: 40, bottom: 50, left: 40 })
+        .margins({ top: 20, right: 30, bottom: 50, left: 30 })
         .dimension(country_dim)
         .group(total_emissions)
         .transitionDuration(500)
@@ -214,7 +216,7 @@ function show_country_emission_pie(ndx) {
     var total_emissions_pie = area_dim.group().reduceSum(dc.pluck('EmissionsC'));
 
     dc.pieChart("#country-pie-chart")
-        .width(450)
+        .width(420)
         .height(500)
         .innerRadius(50)
         .externalRadiusPadding(45)
@@ -228,7 +230,7 @@ function show_country_emission_pie(ndx) {
         .legend(
             dc
             .legend()
-            .x(395)
+            .x(363)
             .y(20)
             .horizontal(false)
             .itemHeight(5)
@@ -242,10 +244,6 @@ function show_country_emission_pie(ndx) {
         
    
 }
-
-
-
-
 
 
 
@@ -296,21 +294,26 @@ function show_yearly_plastic_waste_pie(ndx) {
         .legend(
             dc
             .legend()
-            .x(375)
+            .x(380)
             .y(15)
             .horizontal(false)
             .itemHeight(5)
             .gap(5)
         );
+     /*   .on('pretransition', function(chart) {
+                chart.selectAll('title.pie-slice-group').text(function(d) {
+                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+                })
+            }); */
 }
 
 function show_plastic_waste_dim(ndx) {
 
     var plastic_dimension = ndx.dimension(function(d) {
         if (d.PlasticWasteYearly > 50)
-            return "+ 50kgs per person";
+            return "+ 50kgs per capita - ";
         else
-            return "- 50kgs per person"
+            return "- 50kgs per captia -  "
     });
 
     var plastic_group = plastic_dimension.group();
@@ -319,53 +322,65 @@ function show_plastic_waste_dim(ndx) {
     dc.pieChart('#yearly-plastic-dim')
         .height(380)
         .width(350)
-        /*.useViewBoxResizing(true)*/
+        .title(function(d) {
+            return "The amount of countries that produce less that 50kgs plastic waste per annum" ;
+        })
         .radius(110)
         .dimension(plastic_dimension)
-        .group(plastic_group);
+        .group(plastic_group)
+        .on('pretransition', function(chart) {
+                chart.selectAll('text.pie-slice').text(function(d) {
+                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+                })
+            });
 
 }
 
-/*
+
 function show_row_chart(ndx) {
-    
-}
 
-/*
 
-function show_responsive_barchart(ndx) {
-    
     var area_dim = ndx.dimension(dc.pluck('Country'));
     var yearly_plastic_pie = area_dim.group().reduceSum(dc.pluck('PlasticWasteYearly'));
 
 
-    var width = document.getElementById("resize").offsetWidth;
-
-    barChart = dc.barChart("#response-bar");
-
-    barChart
-        .width(width)
+    dc.rowChart("#row-chart")
+        .width(450)
+        .height(450)
+        .margins({top: 5, left: 10, right: 10, bottom: 20})
+        .x(d3.scale.ordinal())
+        .elasticX(true)
+        .dimension(area_dim)
+        .group(yearly_plastic_pie);
+        
+}
+    
+    
+    
+    /* Attempted resizing */
+    /*   
+    
+    .width(400)
         .height(350)
         .margins({ top: 10, right: 40, bottom: 30, left: 40 })
         .dimension(area_dim)
         .group(yearly_plastic_pie)
         .elasticY(true)
-        .gap(1)
-        .x(d3.scale.ordinal().domain([0, 5]))
+        .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Country")
         .xAxisLabel("Waste")
         .renderHorizontalGridLines(true)
         .transitionDuration(700);
 
-    window.onresize = function(event) {
-        var newWidth = document.getElementById("resize").offsetWidth;
+   /* window.onresize = function(event) {
+        var newWidth = document.getElementById("resize-chart").offsetWidth;
 
         barChart.width(newWidth / 2)
             .transitionDuration(0);
 
 
         barChart.transitionDuration(750);
-    };
-    }
-*/
+    }; */
+   
+
