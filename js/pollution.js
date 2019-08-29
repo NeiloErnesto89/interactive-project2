@@ -31,13 +31,22 @@ function makeGraphs(error, euData) {
 
     show_eu_per_cap_barchart(ndx);
 
-    /*  show_responsive_barchart(ndx); */
 
 
     dc.renderAll();
 
 }
 
+/*function show_pie_percent(key, endAngle, startAngle) {
+    
+    var percentage = dc.utils.printSingleValue((endAngle - startAngle) / (2 * Math.PI) * 100);
+    if (percent > 100) {
+        return key + ' | ' + Math.round(percent) + '%';
+    }
+    else if (percent > 0) {
+        return Math.round(percent) + '%';
+    } 
+} */
 
 
 function show_eu_population(ndx) {
@@ -90,6 +99,7 @@ function show_country_selector(ndx) {
 
     dc.selectMenu("#country-selector")
         .dimension(dim)
+       /* .title add to remove : 1 */
         .group(group);
 }
 
@@ -211,7 +221,7 @@ function show_country_emission_pie(ndx) {
         .transitionDuration(1500)
         .dimension(area_dim)
         .group(total_emissions_pie)
-        .externalLabels(20)
+        .externalLabels(21)
         .drawPaths(true)
         .minAngleForLabel(0)
         .cap(5)
@@ -223,7 +233,13 @@ function show_country_emission_pie(ndx) {
             .horizontal(false)
             .itemHeight(5)
             .gap(5)
-        );
+        )
+        .on('pretransition', function(chart) {
+                chart.selectAll('text.pie-slice').text(function(d) {
+                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+                })
+            });
+        
    
 }
 

@@ -1,6 +1,6 @@
 .cover-container {
     min-height: 100vh;
-    /*  padding: 15px; */
+    padding-top: 70px; 
     /* removed to faciltate footer */
     background-color: rgb(217, 255, 204);
     -webkit-background-size: cover;
@@ -17,6 +17,46 @@
     position: relative;
     overflow-x: hidden;
 }
+
+/* Navbar  */
+
+.nav-container {
+    
+    position: fixed; 
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.navbar {
+    background-color: rgb(10, 173, 13, 0.6);
+    margin: 0;
+    border: 0;
+}
+
+.navbar-nav {
+    font-style: bold; 
+    text-align: left;
+    list-style: none;
+    /* to counter the body - text center inherited rule */
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
 
 .container-fluid {
     width: 100%;
@@ -57,10 +97,13 @@ div.dc-chart {
 
 .mainheader {
     color: green;
+    font-size: 50px;
+    text-decoration: underline;
 }
 
 .underhead {
     color: green;
+    font-weight: bold;
 }
 
 button {
@@ -84,6 +127,7 @@ button {
 .regional-pie {
     color: green;
     text-align: center;
+    text-decoration: underline;
     margin-top: 10px;
     margin-bottom: 15px;
 
@@ -92,6 +136,7 @@ button {
 .regional-line {
     color: green;
     text-align: center;
+    text-decoration: underline;
     margin-top: 10px;
     margin-bottom: 15px;
 }
