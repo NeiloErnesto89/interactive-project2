@@ -1,6 +1,7 @@
 .cover-container {
     min-height: 100vh;
-  /*  padding: 15px; */ /* removed to faciltate footer */
+    /*  padding: 15px; */
+    /* removed to faciltate footer */
     background-color: rgb(217, 255, 204);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -161,8 +162,30 @@ button {
 
 }
 
+/* MODAL */
+
 .modal {
     color: black;
+    background-color: rgb(204, 255, 204, 0.8);
+}
+
+.modal-title {
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.modal-body {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(204, 255, 204, 0.4);
+    text-align: center;
+}
+
+.modal-header .close {
+    margin: -10px;
 }
 
 /* FOOTER */
