@@ -1,7 +1,7 @@
 .cover-container {
     min-height: 100vh;
-    padding-top: 70px; 
-    /* removed to faciltate footer */
+    padding-top: 70px;
+    /* removed to facilitate footer */
     background-color: rgb(217, 255, 204);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -18,11 +18,39 @@
     overflow-x: hidden;
 }
 
+.container-fluid {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Grid */
+
+.row {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chart-wrapper {
+    /*  max-width: 960px; */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(28, 163, 42, 0.3);
+    text-align: center;
+    display: flex;
+}
+
+
 /* Navbar  */
 
 .nav-container {
-    
-    position: fixed; 
+
+    position: fixed;
     width: 100%;
     z-index: 1;
     top: 0;
@@ -41,7 +69,7 @@
 }
 
 .navbar-nav {
-    font-style: bold; 
+    font-style: bold;
     text-align: left;
     list-style: none;
     /* to counter the body - text center inherited rule */
@@ -57,27 +85,35 @@
 }
 
 
-
-.container-fluid {
-    width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .nav-icon {
     font-size: 20px;
 }
+
+/* Emissions/Number Box*/
 
 .emissions-box {
     font-size: 15px;
     margin-bottom: 2px;
 }
 
+.number-box {
+    margin: 10px;
+    font-size: 35px;
+    border: 2px solid #e5d9d9;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
 div.dc-chart {
     float: none;
 }
+
+/* Buttons */
 
 #reset-button {
     color: #3d7a59;
@@ -93,6 +129,21 @@ div.dc-chart {
     /*  position: fixed; */
 }
 
+button {
+    margin: 5px;
+    color: white;
+    background-color: green;
+    width: 130px;
+    height: 65px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.mini-button {
+    margin: -20px;
+    padding: 2px;
+}
+
 
 
 .mainheader {
@@ -106,15 +157,7 @@ div.dc-chart {
     font-weight: bold;
 }
 
-button {
-    margin: 5px;
-    color: white;
-    background-color: green;
-    width: 130px;
-    height: 65px;
-    line-height: 30px;
-    font-weight: bold;
-}
+
 
 .hr {
     margin-top: 10px;
@@ -141,45 +184,15 @@ button {
     margin-bottom: 15px;
 }
 
-.row {
-    margin-right: 15px;
-    margin-left: 15px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.chart-wrapper {
-    /*  max-width: 960px; */
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: rgba(28, 163, 42, 0.3);
-    text-align: center;
-    display: flex;
-}
 
 .chart-header {
-   color: green; 
-   text-decoration: underline;
-}
-
-.number-box {
-    margin: 10px;
-    font-size: 35px;
-    border: 2px solid #e5d9d9;
-    border-radius: 15px;
-    background-color: green;
-    color: white;
-    padding: 10px;
-    text-align: center;
-
+    color: green;
+    text-decoration: underline;
 }
 
 
-.mini-button {
-    margin: -20px;
-    padding: 2px;
-}
+
+
 
 
 .regional-selector {
@@ -198,7 +211,8 @@ button {
 #eu-pollution-chart .axis.x>.tick>text {
 
     text-align: right;
-    font-size: 9px;
+    font-size: 8.5px;
+    font-weight: bold;
     transform: translate(-12px, 8px) rotate(-30deg);
 
     /*formerly -12px, 22px (-90deg)*/
@@ -208,8 +222,15 @@ button {
 
     text-align: right;
     font-size: 8.2px;
+    font-weight: bold;
     transform: translate(-12px, 8px) rotate(-30deg);
 
+}
+
+.dc-chart .pie-slice {
+    fill: #fff;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 /* MODAL */
@@ -219,19 +240,32 @@ button {
     background-color: rgb(204, 255, 204, 0.8);
 }
 
+.modal-header {
+
+    background-color: rgb(204, 255, 204, 0.4);
+
+}
+
 .modal-title {
-    font-size: 29px;
+    font-size: 34px;
     font-weight: bold;
     text-align: center;
-    margin: 5px;
+    margin-left: 45px;
     padding: 5px;
+    text-decoration: underline;
 }
+
 
 .modal-body {
     font-size: 15px;
     font-weight: bold;
-    background-color: rgb(204, 255, 204, 0.4);
+    color: white;
+    background-color: rgb(0, 153, 51, 0.7);
     text-align: center;
+}
+
+.modal-footer {
+    background-color: rgb(204, 255, 204, 0.4);
 }
 
 .modal-header .close {
@@ -254,11 +288,3 @@ button {
     margin-top: 10px;
 }
 
-/*
-#eu-pollution-chart > .x-axis-label   {
-    
-transform: translate(425,725); 
-    
-}
-
-*/

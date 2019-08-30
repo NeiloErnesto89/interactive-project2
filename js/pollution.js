@@ -9,7 +9,7 @@ function makeGraphs(error, euData) {
     var ndx = crossfilter(euData);
 
 
-    // charts
+    /* charts */
 
     show_eu_population(ndx);
 
@@ -38,17 +38,6 @@ function makeGraphs(error, euData) {
     dc.renderAll();
 
 }
-
-/*function show_pie_percent(key, endAngle, startAngle) {
-    
-    var percentage = dc.utils.printSingleValue((endAngle - startAngle) / (2 * Math.PI) * 100);
-    if (percent > 100) {
-        return key + ' | ' + Math.round(percent) + '%';
-    }
-    else if (percent > 0) {
-        return Math.round(percent) + '%';
-    } 
-} */
 
 
 function show_eu_population(ndx) {
@@ -79,21 +68,6 @@ function show_eu_emission_total(ndx) {
         });
 }
 
-/*
-// ==== % population born abroad number display 
-function show_total_deaths(ndx, total_deaths_percent) {
-
-	var total_deaths = dc.numberDisplay("#total-deaths");
-
-	total_deaths
-		.formatNumber(d3.format(".0%")) // format number as percentage
-		.group(total_deaths) // group brought in from makeCharts()
-		.valueAccessor(function(d) {
-			return d.average / 100; // divide by 100 to allow % number format
-		});
-} */
-
-
 
 function show_country_selector(ndx) {
     dim = ndx.dimension(dc.pluck("Country"));
@@ -101,8 +75,10 @@ function show_country_selector(ndx) {
 
     dc.selectMenu("#country-selector")
         .dimension(dim)
-       /* .title add to remove : 1 */
-        .group(group);
+        .group(group)
+        .title(function (d) {
+            return d.key ;
+        });
 }
 
 function show_eu_barchart(ndx) {
@@ -110,12 +86,12 @@ function show_eu_barchart(ndx) {
     var total_emissions = country_dim.group().reduceSum(dc.pluck('EmissionsC'));
 
     var countryColors = d3.scale.ordinal()
-        .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
-        .range(["Pink", "Green", "Orange", "Yellow", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "OrangeRed", "Lemon", "FireBrick", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
+        .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "UK"])
+        .range(["#bf80ff", "Green", "Orange", "Yellow", "Brown", "Purple", "Orange", "Coffee", "Coral", "Yellow", "Gold", "OrangeRed", "Lemon", "FireBrick", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "yellow", "Ruby", "pink"]);
 
 
     dc.barChart("#eu-pollution-chart")
-        .width(450)
+        .width(460)
         .height(550)
         .margins({ top: 20, right: 30, bottom: 50, left: 30 })
         .dimension(country_dim)
@@ -125,7 +101,10 @@ function show_eu_barchart(ndx) {
         .xUnits(dc.units.ordinal)
         .colors(countryColors)
         .colorAccessor(function(d) {
-            return d.key[0];
+            return d.value;
+        })
+        .title(function (d) {
+            return d.key + " produces " + d.value.toFixed(2) + " million tonnes of Co2 per annum, which is " + (d.value/365).toFixed(2) + " million tonnes of Co2 per day" ;
         })
         .xAxisLabel("Countries")
         .yAxisLabel("Co2 Emission Level (million tonnes)")
@@ -135,14 +114,50 @@ function show_eu_barchart(ndx) {
 }
 
 
+function show_country_emission_pie(ndx) {
+    var area_dim = ndx.dimension(dc.pluck('Country'));
+    var total_emissions_pie = area_dim.group().reduceSum(dc.pluck('EmissionsC'));
+
+    dc.pieChart("#country-pie-chart")
+        .width(420)
+        .height(500)
+        .innerRadius(50)
+        .externalRadiusPadding(45)
+        .transitionDuration(1500)
+        .dimension(area_dim)
+        .group(total_emissions_pie)
+        .externalLabels(21)
+        .drawPaths(true)
+        .minAngleForLabel(0)
+        .cap(5)
+        .title(function (d) {
+            return d.key + " produces " + d.value.toFixed(2) + " million tonnes of Co2 per annum, which is " + (d.value/365).toFixed(2) + " million tonnes of Co2 per day" ;
+        })
+        .legend(
+            dc
+            .legend()
+            .x(363)
+            .y(20)
+            .horizontal(false)
+            .itemHeight(5)
+            .gap(5)
+        )
+        .on('pretransition', function(chart) {
+                chart.selectAll('text.pie-slice').text(function(d) {
+                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+                })
+            });
+        
+   
+}
 
 function show_eu_per_cap_barchart(ndx) {
     var nation_dim = ndx.dimension(dc.pluck("Country"));
     var total_emissions_per = nation_dim.group().reduceSum(dc.pluck('EmissionsPerCap'));
 
     var nationColors = d3.scale.ordinal()
-        .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
-        .range(["red", "pink", "blue", "green", "Brown", "Purple", "Orange", "yellow", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
+        .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "UK"])
+        .range(["red", "pink", "blue", "green", "Brown", "Purple", "Orange", "yellow", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "#4B15EE", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "#E74C3C"]);
 
 
     dc.barChart("#eu-per_cap-chart")
@@ -156,7 +171,10 @@ function show_eu_per_cap_barchart(ndx) {
         .xUnits(dc.units.ordinal)
         .colors(nationColors)
         .colorAccessor(function(d) {
-            return d.key[0];
+            return d.value;
+        })
+        .title(function (d) {
+            return d.key + "'s citizens individually produce " + d.value.toFixed(2) + " tonnes of Co2 per annum, which is " + (d.value/365).toFixed(2) + " tonnes of Co2 per day" ;
         })
         .xAxisLabel("Countries")
         .yAxisLabel("Per Capita Co2 Emissions (tonnes)")
@@ -164,8 +182,6 @@ function show_eu_per_cap_barchart(ndx) {
 
 
 }
-
-
 
 
 function show_death_v_gdp_correlation(ndx) {
@@ -196,7 +212,7 @@ function show_death_v_gdp_correlation(ndx) {
         .xAxisLabel("GDP (€)")
         .yAxisLabel("Deaths")
         .title(function(d) {
-            return "The average death rate due to air pollution is " + d.key[1] + " per 100,000 in " + d.key[2] + "; where the GDP is " + d.key[0] + " (€)" ;
+            return "The average death rate due to air pollution is " + d.key[1] + " per 100,000 in " + d.key[2] + "; where the GDP is €" + d.key[0]  ;
         })
         .colorAccessor(function(d) {
             return d.key[2];
@@ -209,42 +225,6 @@ function show_death_v_gdp_correlation(ndx) {
 
 
 }
-
-
-function show_country_emission_pie(ndx) {
-    var area_dim = ndx.dimension(dc.pluck('Country'));
-    var total_emissions_pie = area_dim.group().reduceSum(dc.pluck('EmissionsC'));
-
-    dc.pieChart("#country-pie-chart")
-        .width(420)
-        .height(500)
-        .innerRadius(50)
-        .externalRadiusPadding(45)
-        .transitionDuration(1500)
-        .dimension(area_dim)
-        .group(total_emissions_pie)
-        .externalLabels(21)
-        .drawPaths(true)
-        .minAngleForLabel(0)
-        .cap(5)
-        .legend(
-            dc
-            .legend()
-            .x(363)
-            .y(20)
-            .horizontal(false)
-            .itemHeight(5)
-            .gap(5)
-        )
-        .on('pretransition', function(chart) {
-                chart.selectAll('text.pie-slice').text(function(d) {
-                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-                })
-            });
-        
-   
-}
-
 
 
 function show_waste_gdp_line(ndx) {
@@ -288,11 +268,14 @@ function show_yearly_plastic_waste_pie(ndx) {
         .externalLabels(25)
         .drawPaths(true)
         .minAngleForLabel(0)
+        .title(function (d) {
+            return d.key + "'s citizens individually produce " + d.value.toFixed(2) + " kgs of plastic waste per annum, which is " + (d.value/365).toFixed(2) + " kgs per day" ;
+        })
         .cap(9)
         .legend(
             dc
             .legend()
-            .x(380)
+            .x(382)
             .y(15)
             .horizontal(false)
             .itemHeight(5)
@@ -346,7 +329,7 @@ function show_row_chart(ndx) {
         .x(d3.scale.ordinal())
         .elasticX(true)
         .title(function (d) {
-            return d.key + "'s citizens produce " + d.value + " kgs per annum, which is " + (d.value/365).toFixed(2) + " kgs per day" ;
+            return d.key + "'s citizens individually produce " + d.value + " kgs of plastic waste per annum, which is " + (d.value/365).toFixed(2) + " kgs per day" ;
         })
         .dimension(area_dim)
         .group(yearly_plastic_pie);
@@ -354,31 +337,4 @@ function show_row_chart(ndx) {
 }
     
     
-    
-    /* Attempted resizing */
-    /*   
-    
-    .width(400)
-        .height(350)
-        .margins({ top: 10, right: 40, bottom: 30, left: 40 })
-        .dimension(area_dim)
-        .group(yearly_plastic_pie)
-        .elasticY(true)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .yAxisLabel("Country")
-        .xAxisLabel("Waste")
-        .renderHorizontalGridLines(true)
-        .transitionDuration(700);
-
-   /* window.onresize = function(event) {
-        var newWidth = document.getElementById("resize-chart").offsetWidth;
-
-        barChart.width(newWidth / 2)
-            .transitionDuration(0);
-
-
-        barChart.transitionDuration(750);
-    }; */
-   
 
