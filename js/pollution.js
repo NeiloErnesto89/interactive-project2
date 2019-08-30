@@ -276,8 +276,6 @@ function show_yearly_plastic_waste_pie(ndx) {
     /*var numFormat = d3.format(".0%");*/
 
 
-
-
     dc.pieChart("#yearly-plastic-pie")
         .width(435)
         .height(500)
@@ -300,34 +298,31 @@ function show_yearly_plastic_waste_pie(ndx) {
             .itemHeight(5)
             .gap(5)
         );
-     /*   .on('pretransition', function(chart) {
-                chart.selectAll('title.pie-slice-group').text(function(d) {
-                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-                })
-            }); */
 }
 
 function show_plastic_waste_dim(ndx) {
 
     var plastic_dimension = ndx.dimension(function(d) {
         if (d.PlasticWasteYearly > 50)
-            return "+ 50kgs per capita - ";
+            return "+ 50kgs per capita =  ";
         else
-            return "- 50kgs per captia -  "
+            return "- 50kgs per captia =  "
     });
 
     var plastic_group = plastic_dimension.group();
+    
+    
 
 
     dc.pieChart('#yearly-plastic-dim')
         .height(380)
         .width(350)
-        .title(function(d) {
-            return "The amount of countries that produce less that 50kgs plastic waste per annum" ;
-        })
         .radius(110)
         .dimension(plastic_dimension)
         .group(plastic_group)
+        .title(function(d) {
+            return "The EU nations who produce more or less than 50kgs yearly per capita" ;
+        })
         .on('pretransition', function(chart) {
                 chart.selectAll('text.pie-slice').text(function(d) {
                     return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
@@ -350,6 +345,9 @@ function show_row_chart(ndx) {
         .margins({top: 5, left: 10, right: 10, bottom: 20})
         .x(d3.scale.ordinal())
         .elasticX(true)
+        .title(function (d) {
+            return d.key + "'s citizens produce " + d.value + " kgs per annum, which is " + (d.value/365).toFixed(2) + " kgs per day" ;
+        })
         .dimension(area_dim)
         .group(yearly_plastic_pie);
         
