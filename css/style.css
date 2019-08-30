@@ -144,7 +144,7 @@ button {
     padding: 2px;
 }
 
-
+/* Headings */
 
 .mainheader {
     color: green;
@@ -157,7 +157,12 @@ button {
     font-weight: bold;
 }
 
+.chart-header {
+    color: green;
+    text-decoration: underline;
+}
 
+/* Line style */
 
 .hr {
     margin-top: 10px;
@@ -166,6 +171,17 @@ button {
     border-top: 1px solid black;
 }
 
+
+/* Selector/chart headers/styles*/
+
+.regional-selector {
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+    height: 10px;
+
+}
 
 .regional-pie {
     color: green;
@@ -183,27 +199,6 @@ button {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
-
-.chart-header {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-
-
-
-.regional-selector {
-
-    margin-bottom: 10px;
-    margin-top: 10px;
-    float: left;
-    height: 10px;
-
-}
-
 
 
 /* GRAPH LABELS */
@@ -229,7 +224,7 @@ button {
 
 .dc-chart .pie-slice {
     fill: #fff;
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: bold;
 }
 

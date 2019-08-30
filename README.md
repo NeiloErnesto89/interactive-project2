@@ -1,14 +1,22 @@
-# EU Pollution Index
+# **Interactive Frontend Milestone Project II**
+
+# Project Title:  *[EU Pollution Index ] (https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
 
 One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
 
-- My aim in this project was to provide a simple and user friendly index for the user to compare and contrast countries within the European Union based on a small range of different criteria, using Co2 emission level as the main pollution indicator however I also took GDP and annual death rate. I had previously used a similar index on the website www.numbeo.com, where the user could guage different cities around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index however I think the EU 28 nations are an interesting dataset due to the diverse cultures within the EU. 
+## Design brief:
+
+- My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast countries within the European Union based on a small range of different criteria.
+- 
+- I wanted to build a frontend interactive site, based on a topic that I'm very interested in and naturally would allow me to utilise the skills I've acquired during the course. My aim was that the site would be ease to digest from the User's perspective, simple to navigate and also education on this topic. 
+- 
+- Using Co2 emission levels which is used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could guage different cities around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index however I think the EU 28 nations are an interesting dataset due to the diverse cultures within the EU. 
  
  I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations around the world. So the tool is not only enjoyable but has the added benefit of teaching the user an important fact.
  
-## UX
+## UX:
  
 
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -26,37 +34,44 @@ In particular, as part of this section we recommend that you provide a list of U
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
+
+- I used [Balsamiq](https://balsamiq.com/) to create simple wireframes mockups which allowed me to visually render my inital outline for the site. 
+- 
 - wireframes 
 
+*Figure 1. Inital Wireframe*
 
-
-
+![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframes/Wireframe1_P2.jpg "Inital Wireframe")
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+### Existing Features:
+
+The following features are presenting in order of appearance: 
 
 
-- Modal popup with welcome message: Just a simple popup with to welcome visitor to the site
-- EU in Numbers to give the user a quick insight on the size of the population in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selction. 
-- Fixed reset filter button (bottom right of the screen) so the user can simply click to refresh the chart stats.
+- A Modal popup with a welcome message: Just a simple popup with to welcome visitor to the site.
+- A tooltip icon (beside the close button) in the modal footer: This is to give the User a more information where needed. 
+- EU in numbers box: To give the user quick, numerical data on the size of the population(s) in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selection(s). 
+- A "Select all" selector: Underneath the numbers box, is a simple but powerful function with allows the user to chose a country which automatically updates all the charts to show the selected nation's data. 
+- A fixed 'Reset Button': Placed in the bottom right of the screen, the user can simply click to refresh any of the charts statisitcs. It also has a simple tooltip to give further explaination.
 - EU nations barchart to show the differing levels of Co2 emssions per state. 
-- An EU emission pie chart follows to give another view of the statistics with a legened and cap, which shows that well over 50% of the emissions in the EU come from just 5 nations.
-- Following this is a per capita emissions chart, which gave a more nuanced insighted into the pollution levels in nations. 
-- Death v GDP scatterplot which I found to be an asthetically pleasing visualisation, demonstrating the loose correaltion between higher GDP and lower mortality rates due to Air Pollution.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- An EU emission pie chart follows to give another view of the statistics with a legened and cap (as not to be too much visually), which shows that well over 50% of the emissions in the EU come from just 5 nations.
+- Following the piechart is a per capita emissions chart, which gave a more nuanced insighted into the pollution levels per capita with the 28 nations. 
+- The (Death v GDP) scatterplot: I found this chart to be the most asthetically pleasing visualisation, demonstrating the loose correaltion between higher GDP and lower mortality rates due to air pollution and vise versa. This chart is perhaps the least interative chart but still can be adapted using the "Select all" selector. 
+- Waste Generation v GDP: This chart is a line graph, guaging the levels of plastic waste generation per capita against the GDP levels. This chart has a brush function, which allows the user to select a range on the graph.
+- Plastic Waste Generation Pie Chart: This pie chart shows the main nations and their citizens plastic waste generation levels per annum. 
+- The '+-50kgs' Piechart split: This simple chart just shows the split of nations with citizens who produce either more or less than 50kgs of plastic waste per annum, along with the percentage of the total plastic waste level. 
+- Row Chart: This chart renders the same data of the Plastic Waste Generation Pie Chart, but in another form which aids the visual experience for the user. 
 
 ### Features Left to Implement
-Another feature idea
 
-- Probably the most enjoyable part of this project was the amount of ideas I had for adding more graphs, dataset and information to this site. The options are endless. I had to keep it realtively simple so as not to go overboard but I feel that among other features, larger and more detailed datasets can be used as well as providing for more User interaction.
+
+- Probably the most enjoyable part of this project was the amount of ideas I had for adding more graphs, as well as more robust datasets and information to the site. The options are endless. I had to keep it realtively simple so as not to go overboard but I feel that among other features, the following would have been ideal:
+
+- In particular, as I mentioned in the opening section of the readMe, a site that I really enjoy is [Numbeo](https://https://www.numbeo.com) and in particular their pollution comparison tool. I think it's a brilliant application that gives the user endlessly interesting and information. For example, the user could evalute the differences between Dublin (Ireland) and Lagos (Nigeria), comparing pollution levels, cost of living, crime etc. This would be something I would love to develop for my site and I will definitely be attempting once I've got some free time.  
+ 
+-  Also, I felt that a GeoJson-Choropleth Map would be a really aesthetically rich, helpful and user friendly chart to add. 
 
 ## Technologies Used
 
