@@ -42,28 +42,31 @@ This section is also where you would share links to any wireframes, mockups, dia
 I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. I focused solely on a desktop view. 
 
 
-*Figure 1. Inital Wireframe*
+#### Wireframe 1
 
 
 ![Wireframe 1 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe1.jpg "Inital Wireframe ")
+*Figure 1. Inital Wireframe*
 
 
-Figure 1 was my very first wireframe, I changed a couple of this to keep the grid/charts simple and visible.
+*Wireframe 1* was my very first wireframe, I changed a couple of this to keep the grid/charts simple and visible.
 
 
-*Figure 2. Country Comparison*
+#### Wireframe 2
 
 
 ![Wireframe 2 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe2.jpg "Country Comparison Wireframe ")
+*Figure 2. Country Comparison*
 
 
-Figure 2 was something I really considered at the beginning but veered away from the idea to stick with project requirements. It's a simple country compartitor (as mentioned earlier) and a tool I really like. I mention this topic further in my *features left to implement* section.
+*Wireframe 2* was an idea I really considered at the beginning but veered away from this topic as so to stick with project requirements. It's a simple country comparator (as mentioned earlier on the site [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp)). It's a tool I really appreciate and I discuss this topic further in the *"Features Left to Implement"* section underneath.
 
 
-*Figure 3. Main Wireframe*
+#### Wireframe 3
 
 
 ![Wireframe 2 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe3.jpg "Settled on Wireframe ")
+*Figure 3. Main Wireframe*
 
 This wireframe, Figure 3, in a simplied version of my intital wireframe, Figure 1, which I just adapt to keep it visually appeasing and focusing a bit more on the UX by having the charts maximum 2 side by side. It's very similar to the final page.
 
@@ -74,18 +77,17 @@ This wireframe, Figure 3, in a simplied version of my intital wireframe, Figure 
 
 The following features are presenting in order of appearance: 
 
-
-- A Modal popup with a welcome message: Just a simple popup with to welcome visitor to the site.
-- A tooltip icon (beside the close button) in the modal footer: This is to give the User a more information where needed. 
-- EU in numbers box: To give the user quick, numerical data on the size of the population(s) in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selection(s). 
-- A "Select all" selector: Underneath the numbers box, is a simple but powerful function with allows the user to chose a country which automatically updates all the charts to show the selected nation's data. 
-- A fixed 'Reset Button': Placed in the bottom right of the screen, the user can simply click to refresh any of the charts statisitcs. It also has a simple tooltip to give further explaination.
-- EU nations barchart to show the differing levels of Co2 emssions per state. 
-- An EU emission pie chart follows to give another view of the statistics with a legened and cap (as not to be too much visually), which shows that well over 50% of the emissions in the EU come from just 5 nations.
+- A Modal Popup with a welcome message: Just a simple popup with to welcome visitor to the site.
+- A Tooltip Icon (beside the close button) in the modal footer: This is to give the User a more information where needed. 
+- The EU in Numbers Box: To give the user quick, numerical data on the size of the population(s) in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selection(s). 
+- A "Select All" Selector: Underneath the numbers box, is a simple but powerful function with allows the user to chose a country which automatically updates all the charts to show the selected nation's data. 
+- A Fixed 'Reset Button': Placed in the bottom right of the screen, the user can simply click to refresh any of the charts statisitcs. It also has a simple tooltip to give further explaination.
+- EU Nations Barchart to show the differing levels of Co2 emssions per state. 
+- An EU Emission Piechart follows to give another view of the statistics with a legened and cap (as not to be too much visually), which shows that well over 50% of the emissions in the EU come from just 5 nations.
 - Following the piechart is a per capita emissions chart, which gave a more nuanced insighted into the pollution levels per capita with the 28 nations. 
-- The (Death v GDP) scatterplot: I found this chart to be the most asthetically pleasing visualisation, demonstrating the loose correaltion between higher GDP and lower mortality rates due to air pollution and vise versa. This chart is perhaps the least interative chart but still can be adapted using the "Select all" selector. 
-- Waste Generation v GDP: This chart is a line graph, guaging the levels of plastic waste generation per capita against the GDP levels. This chart has a brush function, which allows the user to select a range on the graph.
-- Plastic Waste Generation Pie Chart: This pie chart shows the main nations and their citizens plastic waste generation levels per annum. 
+- The (Death v GDP) Scatterplot: I found this chart to be the most asthetically pleasing visualisation, demonstrating the loose correaltion between higher GDP and lower mortality rates due to air pollution and vise versa. This chart is perhaps the least interative chart but still can be adapted using the "Select all" selector. 
+- Waste Generation v GDP Graph: This chart is a line graph, guaging the levels of plastic waste generation per capita against the GDP levels. This chart has a brush function, which allows the user to select a range on the graph.
+- Plastic Waste Generation Piechart: This pie chart shows the main nations and their citizens plastic waste generation levels per annum. 
 - The '+-50kgs' Piechart split: This simple chart just shows the split of nations with citizens who produce either more or less than 50kgs of plastic waste per annum, along with the percentage of the total plastic waste level. 
 - Row Chart: This chart renders the same data of the Plastic Waste Generation Pie Chart, but in another form which aids the visual experience for the user. 
 
@@ -104,35 +106,46 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 - The following languages were used on this project:
 - 
-    - Javascript
-    - CSS
-    - HTML
+    - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
+    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+    - [Bootstrap 4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+    - [Font Awesome](https://fontawesome.com/)
     
 
 - The following libraries were used on this project:
     -  [JQuery](https://jquery.com) (The project uses **JQuery** to simplify DOM manipulation).
-    -  Crossfilter
-    -  Dc.min.js
-    -  D3.min.js - 
-    -  queue.min.js 
+    -  [Crossfilter](https://square.github.io/crossfilter/)
+    -  [Dc.min.js](https://d3js.org/)
+    -  [D3.min.js](https://d3js.org/) 
+    -  [queue.min.js](https://github.com/d3/d3-queue)
     
 - The following dataset was used on this project:
     -  [Our World in Data](https://ourworldindata.org/air-pollution) I extracted Excel data from the site and simplied it as there was a mountain of detail which I felt wasn't needed for my particular site.
 
 
+### Data Manipulation
+
+Very importantly, once I extracted the data from the site [Our World in Data](https://ourworldindata.org/air-pollution), I found that there was a huge amount of information and I didn't need it all for my particular need.
+
+The plastic waste generation dataset within my Json in from is taking from a dataset from [2010](https://ourworldindata.org/grapher/plastic-waste-per-capita), which was the most recent data in this domain on the site. 
+However the Co2 Emissions levels, GDP, Population in the dataset are taken from [2017](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions).
+
 ## Testing
 
-- For testing, I used the most popular web browsers (Google Chrome, Firefox, Safari and Microsoft Edge) using the devtools in each case. I tested throughout the project after any major adjustment to the project. 
-- 
+For testing, I used the most popular web browsers (Google Chrome, Firefox, Safari and Microsoft Edge) using the devtools in each case. I tested throughout the project after any major adjustment to the project. 
+
 I had an issue with Microsoft Edge and the background color/opacity on my navbar/modal. It seemed not to function with when I used the background-color - rgb(10, 173, 13, 0.6). It wasn't too much of an issue but something to be aware of. 
 
-- I tested and evalued the functionality and responsiveness of each chart/js functionality on each browser. 
-- 
-- For this project, as per the requirements I put more emphasis of the desktop view and focused less on the grid for a mobile viewport. I used the Bootstrap grid system in a very simple fashion despite d3 restrictive nature with regard to the viewport. 
-- The site doesn't work on Internet Explorer and I would recommend against viewing in on a mobile as it has been designed as a desktop site. 
+I tested and evalued the functionality and responsiveness of each chart/js functionality on each browser. 
+
+For this project, as per the requirements I put more emphasis of the desktop view and focused less on the grid for a mobile viewport. I used the Bootstrap grid system in a very simple fashion despite d3 restrictive nature with regard to the viewport. 
+
+*The site bootstrap grid doesn't work on Internet Explorer and I would recommend against viewing in on a mobile viewport as it has been designed as a desktop site.* 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
+One interesting note I made was that on Microsoft Egde, my country selector list display was far more user friendly, this is a good example of a very small function that can be vastly altered for the better (in this case).
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
@@ -144,38 +157,56 @@ For any scenarios that have not been automated, test the user stories manually a
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+This site is deployed on [Github](https://github.com/NeiloErnesto89/interactive-project2)
 
 
 ## Credits
 
-- "Credit where credit's due"
+*"Credit where credit's due"*
+
+My entire dataset was taken from [Our World Data](https://ourworldindata.org/). I maniplated the data myself using Excel to keep the dataset simple.
+
+[Numbeo](https://https://www.numbeo.com) - was a big source of inspiration. 
+
+My fellow coding students, in particular: 
+
+[Tim Nelson](https://github.com/TravelTimN/ci-ifd-lead/blob/master/week3-d3-dc/d3-dc.md) - *And from this helpful list I found further inspiration from more of my fellow students' briliant projects:* 
+
+[Dave Laffan | Super Hero Dashboard](https://steview-d.github.io/superhero-dashboard/) - the use of a reset filter button was derived from this very aesthically 
+
+[Matt Bush | London Dashboard](https://gitbush.github.io/london-boroughs/) - From this site I found the idea of a popup modal explaination to be really good which inspired me to add my own simplifed version.
+
+W3 Schools as always was a big help: 
+[W3 Schools](https://www.w3schools.com/w3css/w3css_modal.asp)
+
+[Bootstrap 4 docs here](https://getbootstrap.com/docs/4.0/examples/cover/)
+
+I found [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to be of some help with a guide on the flexbox and also for my [background image](https://css-tricks.com/perfect-full-page-background-image/) 
+
+I used this [resource](https://dc-js.github.io/dc.js/examples/) but found it at times not so easy to replicate
+
+
+I also read the examples from the Sample Project section to help guide for the project and the Readme and incorporated some sections such as the Deployment section on my Readme - [here](https://courses.codeinstitute.net/courses/course-v1:codeinstitute+FE+2017_T3/courseware/c75714c9636b4cf59120d60acbec6ffd/f851a16813f14b3aae7bd1e6560443cd/?activate_block_id=block-v1%3Acodeinstitute%2BFE%2B2017_T3%2Btype%40sequential%2Bblock%40f851a16813f14b3aae7bd1e6560443cd)
+
+I also referred to [Stack Overflow](https://stackoverflow.com/) for a number of queries but never took any snippets directly as there were often conflicting advice on the queries I had made but they were still helpful nonetheless. 
+
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-- 
-I extracted/downloaded my files from the website - https://ourworldindata.org/air-pollution. They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project.  I manipluated the charts as the information was so dense I had to extract only a small percentage of it. 
+
+I extracted/downloaded my files from the website [Our World Data](https://ourworldindata.org/air-pollution). They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project.  I manipluated the charts as the information was so dense I had to extract only a small percentage of it. 
 
 
 
 ### Media
-- The photos used in this site were obtained from ...
+
+The wireframe images were made by me using [Balsamiq](https://balsamiq.com/).
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
-- 
+From my family and wonderful girlfriend.
 
