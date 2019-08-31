@@ -261,7 +261,7 @@ function show_yearly_plastic_waste_pie(ndx) {
         .height(500)
         /*  .formatNumber(pieNumFormat) */
         .innerRadius(40)
-        .externalRadiusPadding(45)
+        .externalRadiusPadding(55)
         .transitionDuration(1500)
         .dimension(area_dim)
         .group(yearly_plastic_pie)
@@ -280,7 +280,12 @@ function show_yearly_plastic_waste_pie(ndx) {
             .horizontal(false)
             .itemHeight(5)
             .gap(5)
-        );
+        )
+        .on('pretransition', function(chart) {
+                chart.selectAll('text.pie-slice').text(function(d) {
+                    return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+                })
+            });
 }
 
 function show_plastic_waste_dim(ndx) {

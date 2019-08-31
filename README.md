@@ -30,18 +30,23 @@ My user type ideally will be curious and will follow the simple narrative of the
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 - As a user type, I want to perform an action, so that I can achieve a goal.
 - 
+### User Story - 
 
+1). I'm interested in environmental issues and I would like to learn more. 
+2). I would like to learn more about pollution and it's impact on societies. 
+3). I'm not at concerned with the enviroment but I'm a fan of geography and random facts.
+4). I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution.
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 
-- I used [Balsamiq](https://balsamiq.com/) to create simple wireframes mockups which allowed me to visually render my inital outline for the site. 
+- I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. 
 - 
 - wireframes 
 
 *Figure 1. Inital Wireframe*
 
-![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/Wireframe2_P2.jpg "Inital Wireframe ")
+![Wireframe 1 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe1.jpg "Inital Wireframe ")
 
 <!--![Wireframe mobile page ](https://github.com/NeiloErnesto89/project1-ux/blob/master/images/wireframemob.jpg "Wireframe Mobile Page  - Mobile page ") -->
 
@@ -103,9 +108,13 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - 
 I had an issue with Microsoft Edge and the background color/opacity on my navbar/modal. It seemed not to function with when I used the background-color - rgb(10, 173, 13, 0.6). It wasn't too much of an issue but something to be aware of. 
 
+- I tested and evalued the functionality and responsiveness of each chart/js functionality on each browser. 
+- 
+- For this project, as per the requirements I put more emphasis of the desktop view and focused less on the grid for a mobile viewport. I used the Bootstrap grid system in a very simple fashion despite d3 restrictive nature with regard to the viewport. 
+- The site doesn't work on Internet Explorer and I would recommend against viewing in on a mobile as it has been designed as a desktop site. 
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
