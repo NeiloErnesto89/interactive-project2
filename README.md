@@ -1,56 +1,74 @@
 # **Interactive Frontend Milestone Project II**
 
-# Project Title:  *[EU Pollution Index ](https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
+## Project Title:  *[EU Pollution Index ](https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
 
-One or two paragraphs providing an overview of your project.
 
-Essentially, this part is your sales pitch.
+### Design brief:
 
-## Design brief:
+My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast countries within the European Union based on a small range of different criteria.
 
-- My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast countries within the European Union based on a small range of different criteria.
-- 
-- I wanted to build a frontend interactive site, based on a topic that I'm very interested in and naturally would allow me to utilise the skills I've acquired during the course. My aim was that the site would be ease to digest from the User's perspective, simple to navigate and also education on this topic. 
-- 
-- Using Co2 emission levels which is used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could guage different cities around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index however I think the EU 28 nations are an interesting dataset due to the diverse cultures within the EU. 
+I wanted to build a frontend interactive site, based on a topic that I'm very interested in and naturally would allow me to utilise the skills I've acquired during the course. My aim was that the site would be ease to digest from the User's perspective, simple to navigate and also education on this topic. 
+
+Using Co2 emission levels which is used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could guage different cities around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index however I think the EU 28 nations are an interesting dataset due to the diverse cultures within the EU. 
  
- I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations around the world. So the tool is not only enjoyable but has the added benefit of teaching the user an important fact.
+I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations around the world. So the tool is not only enjoyable but has the added benefit of teaching the user an important fact.
  
-## UX:
+### UX:
  
 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+Using the skills I had garnered from my last project, I felt I should continue along with a similar layout for the UX. My focus was on usability, with a simple and effcient design. 
 
-- Using the skills I had garnered from my last project, I felt I should continue along with a similar layout for the UX. My focus was on usability, with a simple and effcient design. 
+Like my first milestone project, the aim of the UX on this page is make it as simple, legible and efficent for the user as possible. Data visualisation is a great way to make a chunk of data more interesting so I wanted the UX to have an easy time digesting what is in fact a bit of a morbid subject. 
 
-- Like my first milestone project, the aim of the UX on this page is make it as simple, legible and efficent for the user as possible. Data visualisation is a great way to make a chunk of data more interesting so I wanted the UX to have an easy time digesting what is in fact a bit of a morbid subject. 
-- 
 My user type ideally will be curious and will follow the simple narrative of the site. As per requirments, it's a 1 page site and the data/graphs are presented in a loosely decending order. I placed what I felt to be the more pertient graphs towards to the top of the page with accompanying information. The aim being that the Users interest will be piqued by the facts presented and along with the simple ux will encourage the User to continue scrolling to learn more.  
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-- 
-### User Story - 
 
-1). I'm interested in environmental issues and I would like to learn more. 
-2). I would like to learn more about pollution and it's impact on societies. 
-3). I'm not at concerned with the enviroment but I'm a fan of geography and random facts.
-4). I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution.
+### User Story: 
+
+*The following are some of the potential users/user stories:*
+
+1). "I'm interested in environmental issues and I would like to learn more". 
+
+2). "I would like to learn more about pollution and it's impact on societies". 
+
+3). "I'm not at concerned with the enviroment but I'm a fan of geography and random facts".
+
+4). "I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution".
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
+### *Wireframes*
 
-- I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. 
-- 
-- wireframes 
+I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. I focused solely on a desktop view. 
+
 
 *Figure 1. Inital Wireframe*
 
+
 ![Wireframe 1 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe1.jpg "Inital Wireframe ")
 
-<!--![Wireframe mobile page ](https://github.com/NeiloErnesto89/project1-ux/blob/master/images/wireframemob.jpg "Wireframe Mobile Page  - Mobile page ") -->
 
-## Features
+Figure 1 was my very first wireframe, I changed a couple of this to keep the grid/charts simple and visible.
+
+
+*Figure 2. Country Comparison*
+
+
+![Wireframe 2 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe2.jpg "Country Comparison Wireframe ")
+
+
+Figure 2 was something I really considered at the beginning but veered away from the idea to stick with project requirements. It's a simple country compartitor (as mentioned earlier) and a tool I really like. I mention this topic further in my *features left to implement* section.
+
+
+*Figure 3. Main Wireframe*
+
+
+![Wireframe 2 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe3.jpg "Settled on Wireframe ")
+
+This wireframe, Figure 3, in a simplied version of my intital wireframe, Figure 1, which I just adapt to keep it visually appeasing and focusing a bit more on the UX by having the charts maximum 2 side by side. It's very similar to the final page.
+
+
+## Features:
 
 ### Existing Features:
 
