@@ -1,6 +1,6 @@
 # **Interactive Frontend Milestone Project II**
 
-# Project Title:  *[EU Pollution Index ] (https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
+# Project Title:  *[EU Pollution Index ](https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
 
 One or two paragraphs providing an overview of your project.
 
@@ -41,7 +41,9 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 *Figure 1. Inital Wireframe*
 
-![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframes/Wireframe1_P2.jpg "Inital Wireframe")
+![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframes/Wireframe2_P2.jpg "Inital Wireframe ")
+
+<!--![Wireframe mobile page ](https://github.com/NeiloErnesto89/project1-ux/blob/master/images/wireframemob.jpg "Wireframe Mobile Page  - Mobile page ") -->
 
 ## Features
 
@@ -129,6 +131,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
+- "Credit where credit's due"
+
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 - 
@@ -143,5 +147,4 @@ I extracted/downloaded my files from the website - https://ourworldindata.org/ai
 
 - I received inspiration for this project from X
 - 
-# interactive-project2
-# interactive-project2
+
