@@ -41,7 +41,7 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 *Figure 1. Inital Wireframe*
 
-![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframes/Wireframe2_P2.jpg "Inital Wireframe ")
+![Wireframe 1 ](https://https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/Wireframe2_P2.jpg "Inital Wireframe ")
 
 <!--![Wireframe mobile page ](https://github.com/NeiloErnesto89/project1-ux/blob/master/images/wireframemob.jpg "Wireframe Mobile Page  - Mobile page ") -->
 
@@ -84,7 +84,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - Javascript
     - CSS
     - HTML
-    - 
+    
 
 - The following libraries were used on this project:
     -  [JQuery](https://jquery.com) (The project uses **JQuery** to simplify DOM manipulation).
@@ -98,6 +98,10 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 
 ## Testing
+
+- For testing, I used the most popular web browsers (Google Chrome, Firefox, Safari and Microsoft Edge) using the devtools in each case. I tested throughout the project after any major adjustment to the project. 
+- 
+I had an issue with Microsoft Edge and the background color/opacity on my navbar/modal. It seemed not to function with when I used the background-color - rgb(10, 173, 13, 0.6). It wasn't too much of an issue but something to be aware of. 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 

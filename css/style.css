@@ -63,7 +63,8 @@
 }
 
 .navbar {
-    background-color: rgb(10, 173, 13, 0.6);
+    background-color: rgb(10, 173, 13);
+    opacity: 0.9;
     margin: 0;
     border: 0;
 }
@@ -237,7 +238,8 @@ button {
 
 .modal-header {
 
-    background-color: rgb(204, 255, 204, 0.4);
+    background-color: rgb(204, 255, 204);
+    opacity: 0.8;
 
 }
 
@@ -255,12 +257,14 @@ button {
     font-size: 15px;
     font-weight: bold;
     color: white;
-    background-color: rgb(0, 153, 51, 0.7);
+    background-color: rgb(0, 153, 51);
+    opacity: 0.8;
     text-align: center;
 }
 
 .modal-footer {
-    background-color: rgb(204, 255, 204, 0.4);
+    background-color: rgb(204, 255, 204);
+    opacity: 0.8;
 }
 
 .modal-header .close {
