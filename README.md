@@ -1,24 +1,24 @@
 # **Interactive Frontend Milestone Project II**
 
-## Project Title:  *[EU Pollution Index ](https://neiloernesto89.github.io/interactive-project2/)* - a site focused demonstrating visualed data on pollution in the EU.
+## Project Title:  *[EU Pollution Index ](https://neiloernesto89.github.io/interactive-project2/)* - a site aimed at showcasing visualed data based on pollution levels in the EU.
 
 
 ### Design brief:
 
-My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast countries within the European Union based on a small range of different criteria.
+My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast the 28countries within the European Union based on a small range of different criteria.
 
-I wanted to build a frontend interactive site, based on a topic that I'm very interested in and naturally would allow me to utilise the skills I've acquired during the course. My aim was that the site would be ease to digest from the User's perspective, simple to navigate and also education on this topic. 
+I wanted to build a frontend interactive site, based on a topic that I'm very interested in and that would naturally allow me to utilise the skills I've acquired during the course. My aim was that the site would be easy to digest from the User's perspective, simple to navigate and also educational on this topic. 
 
-Using Co2 emission levels which is used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could guage different cities around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index however I think the EU 28 nations are an interesting dataset due to the diverse cultures within the EU. 
+Using Co2 emission levels, which are used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could gauge different cities from around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index, howeve,r I think the EU 28 nations are an interesting dataset due to the diverse nation within the EU. 
  
-I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations around the world. So the tool is not only enjoyable but has the added benefit of teaching the user an important fact.
+I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations within the EU. So the tool is not only enjoyable but has the added benefit of showcasing to the user some important data.
  
 ### UX:
  
 
 Using the skills I had garnered from my last project, I felt I should continue along with a similar layout for the UX. My focus was on usability, with a simple and effcient design. 
 
-Like my first milestone project, the aim of the UX on this page is make it as simple, legible and efficent for the user as possible. Data visualisation is a great way to make a chunk of data more interesting so I wanted the UX to have an easy time digesting what is in fact a bit of a morbid subject. 
+Like my first milestone project, the aim of the UX on this site is to make it as simple, legible and efficent for the user as possible. Data visualisation is a great way to make a chunk of numerical data more interesting, so I wanted the UX to be straightforward. I also wanted the data to be presented in an enjoyable manner, despite, what is in actual fact, a bit of a morbid subject. 
 
 My user type ideally will be curious and will follow the simple narrative of the site. As per requirments, it's a 1 page site and the data/graphs are presented in a loosely decending order. I placed what I felt to be the more pertient graphs towards to the top of the page with accompanying information. The aim being that the Users interest will be piqued by the facts presented and along with the simple ux will encourage the User to continue scrolling to learn more.  
 
@@ -31,15 +31,16 @@ My user type ideally will be curious and will follow the simple narrative of the
 
 2). "I would like to learn more about pollution and it's impact on societies". 
 
-3). "I'm not at concerned with the enviroment but I'm a fan of geography and random facts".
+3). "I'm not at concerned with the enviroment but I'm a fan of geography and random data".
 
 4). "I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution".
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ### *Wireframes*
 
-I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. I focused solely on a desktop view. 
+The following section contains the mockups/wireframes  that I created prior to actually starting to code my project. The goal to give myself an idea of where I wanted the site to go and how it wanted to look, as well as tentatively considering some of its functionality.
+
+I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, which allowed me to visually render the inital outline for the site. I focused solely on a desktop view:
 
 
 #### Wireframe 1
@@ -49,7 +50,7 @@ I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, whi
 *Figure 1. Inital Wireframe*
 
 
-*Wireframe 1* was my very first wireframe, I changed a couple of this to keep the grid/charts simple and visible.
+*Wireframe 1* was my very first wireframe, I changed a couple of points to keep the grid/charts simple and visible.
 
 
 #### Wireframe 2
@@ -59,7 +60,7 @@ I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, whi
 *Figure 2. Country Comparison*
 
 
-*Wireframe 2* was an idea I really considered at the beginning but veered away from this topic as so to stick with project requirements. It's a simple country comparator (as mentioned earlier on the site [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp)). It's a tool I really appreciate and I discuss this topic further in the *"Features Left to Implement"* section underneath.
+*Wireframe 2* was an idea I really considered at the beginning but veered away from as so to stick with project requirements. It's a simple country comparator (as mentioned earlier, the idea coming from the site [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp)). It's a tool I really appreciate and I discuss this topic further in the *"Features Left to Implement"* section underneath.
 
 
 #### Wireframe 3
@@ -68,16 +69,16 @@ I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, whi
 ![Wireframe 2 ](https://github.com/NeiloErnesto89/interactive-project2/blob/master/images/wireframe3.jpg "Settled on Wireframe ")
 *Figure 3. Main Wireframe*
 
-This wireframe, Figure 3, in a simplied version of my intital wireframe, Figure 1, which I just adapt to keep it visually appeasing and focusing a bit more on the UX by having the charts maximum 2 side by side. It's very similar to the final page.
+This wireframe, Figure 3, is a simplied version of my intital wireframe, Figure 1, which I adapted to keep it visually appeasing. I focused a bit more on the UX by having the charts at maximum of 2, side by side. It's very similar to the final page.
 
 
 ## Features:
 
 ### Existing Features:
 
-The following features are presenting in order of appearance: 
+The following features are presenting in a loose order of appearance: 
 
-- A Modal Popup with a welcome message: Just a simple popup with to welcome visitor to the site.
+- A Modal Popup with a welcome message: Just a simple popup with to welcome visitor to the site and to give further explaination.
 - A Tooltip Icon (beside the close button) in the modal footer: This is to give the User a more information where needed. 
 - The EU in Numbers Box: To give the user quick, numerical data on the size of the population(s) in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selection(s). 
 - A "Select All" Selector: Underneath the numbers box, is a simple but powerful function with allows the user to chose a country which automatically updates all the charts to show the selected nation's data. 
@@ -105,22 +106,24 @@ The following features are presenting in order of appearance:
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - The following languages were used on this project:
-- 
-    - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-    - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
-    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-    - [Bootstrap 4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-    - [Font Awesome](https://fontawesome.com/)
+
+    - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - is the renowned programming scripting language and all libraries are JS. 
+    - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) - is used as the stylesheet language for styling and rendering.
+    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - is used as the standard markup language. 
+    - [Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - is a CSS framework that aids the grid and the layout including the modal popup in this project.
+    - [Font Awesome 5.7.2](https://fontawesome.com/) - a icon and font toolkit, used for the icons in this project.
+    - [Google Font](https://fonts.googleapis.com/css?family=Montserrat:400,700) - for the font (Montserrat used).
     
 
 - The following libraries were used on this project:
-    -  [JQuery](https://jquery.com) (The project uses **JQuery** to simplify DOM manipulation).
-    -  [Crossfilter](https://square.github.io/crossfilter/)
-    -  [Dc.min.js](https://d3js.org/)
-    -  [D3.min.js](https://d3js.org/) 
-    -  [queue.min.js](https://github.com/d3/d3-queue)
+    -  [JQuery version 3.3.1](https://jquery.com) - JS library to simplify HTML DOM manipulation and is used for the popup modal. 
+    -  [Crossfilter version 1.3.12](https://square.github.io/crossfilter/) - a JS library which supports large quantity datasets in browsers.
+    -  [Dc.js version 2.1.8](https://dc-js.github.io/dc.js/) - JS charting library which uses d3 to allow for "CSS-friendly" charts
+    -  [D3.js version 3.5.17](https://d3js.org/) - JS library for maniplating data and uses HTML, CSS and SVG in tandem to visually activate the data/charts.
+    -  [Queue.js version 1.0.7](https://github.com/d3/d3-queue) - for loading the Json file dataset.
+    -  [dc.min.css](css/dc.min.css) - DC used for CSS.
     
-- The following dataset was used on this project:
+The following dataset was used on this project:
     -  [Our World in Data](https://ourworldindata.org/air-pollution) I extracted Excel data from the site and simplied it as there was a mountain of detail which I felt wasn't needed for my particular site.
 
 
@@ -143,6 +146,11 @@ For this project, as per the requirements I put more emphasis of the desktop vie
 
 *The site bootstrap grid doesn't work on Internet Explorer and I would recommend against viewing in on a mobile viewport as it has been designed as a desktop site.* 
 
+I used: 
+
+[JS Hint](https://jshint.com/) to check my pollution.js code. 
+
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 One interesting note I made was that on Microsoft Egde, my country selector list display was far more user friendly, this is a good example of a very small function that can be vastly altered for the better (in this case).
@@ -161,11 +169,20 @@ In addition, you should mention in this section how your project looks and works
 
 ## Deployment
 
+#### *This site is deployed on [Github](https://github.com/NeiloErnesto89/interactive-project2)*
 
-This site is deployed on [Github](https://github.com/NeiloErnesto89/interactive-project2)
+This site is hosted using GitHub. I deployed my work directly from the master branch. I added, committed  and pushed my updates via the terminal regularly and then the deployed site automatically upon receiving the new commits to the master branch/source. As per requirements, the landing/main page of the site has been titled `index.html` for the deployment to function correctly on Github pages. 
+
+If one wishes to run this page locally, you can clone (via HTTPS) the repository into a editor terminal using the following link:  `https://github.com/NeiloErnesto89/interactive-project2.git`. If you want to sever ties with GitHub then you need to enter `git remote rm origin` into your terminal.
 
 
-## Credits
+Here is my Github [profile](https://github.com/NeiloErnesto89)
+
+
+Here is my deployed site  on [Github](https://github.com/NeiloErnesto89/interactive-project2)
+
+
+## Credits, References and Links
 
 *"Credit where credit's due"*
 
@@ -198,7 +215,9 @@ I also referred to [Stack Overflow](https://stackoverflow.com/) for a number of 
 
 ### Content
 
-I extracted/downloaded my files from the website [Our World Data](https://ourworldindata.org/air-pollution). They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project.  I manipluated the charts as the information was so dense I had to extract only a small percentage of it. 
+I extracted/downloaded my files from the website [Our World Data](https://ourworldindata.org/air-pollution). They had some beautifully crafted informative charts and also openly allowed the downloading of their data, which was very robust and perfect for my project. 
+
+I manipluated the charts as the information was so dense I had to extract only a small percentage of it. 
 
 
 

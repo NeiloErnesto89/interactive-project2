@@ -71,7 +71,7 @@
 
 .navbar-nav {
     font-style: bold;
-    text-align: left;
+    text-align: left; /* so as not to block the text */
     list-style: none;
     /* to counter the body - text center inherited rule */
 }

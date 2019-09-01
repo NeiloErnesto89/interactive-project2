@@ -71,7 +71,7 @@ function show_eu_emission_total(ndx) {
 
 function show_country_selector(ndx) {
     dim = ndx.dimension(dc.pluck("Country"));
-    group = dim.group()
+    group = dim.group();
 
     dc.selectMenu("#country-selector")
         .dimension(dim)
@@ -145,7 +145,7 @@ function show_country_emission_pie(ndx) {
         .on('pretransition', function(chart) {
                 chart.selectAll('text.pie-slice').text(function(d) {
                     return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-                })
+                });
             });
         
    
@@ -190,7 +190,7 @@ function show_death_v_gdp_correlation(ndx) {
         .domain(["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"])
         .range(["Red", "Yellow", "Pink", "Grey", "Brown", "Purple", "Orange", "Coffee", "Coral", "Emerald", "Gold", "Black", "Lemon", "Green", "Blue", "Violet", "Cyan", "Crimson", "Jade", "Indigo", "Lime", "Magenta", "Olive", "Pear", "Peach", "Plum", "Ruby", "Salmon"]);
 
-    var gdpDim = ndx.dimension(dc.pluck("GDP")) /* on x axis*/
+    var gdpDim = ndx.dimension(dc.pluck("GDP")); /* on x axis*/
     var deathCoDim = ndx.dimension(function(d) {
         return [d.GDP, d.DeathsPer, d.Country] /*first part on x axis*/
     });
@@ -284,7 +284,7 @@ function show_yearly_plastic_waste_pie(ndx) {
         .on('pretransition', function(chart) {
                 chart.selectAll('text.pie-slice').text(function(d) {
                     return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-                })
+                });
             });
 }
 
@@ -294,7 +294,7 @@ function show_plastic_waste_dim(ndx) {
         if (d.PlasticWasteYearly > 50)
             return "+ 50kgs per capita =  ";
         else
-            return "- 50kgs per captia =  "
+            return "- 50kgs per captia =  ";
     });
 
     var plastic_group = plastic_dimension.group();
@@ -314,7 +314,7 @@ function show_plastic_waste_dim(ndx) {
         .on('pretransition', function(chart) {
                 chart.selectAll('text.pie-slice').text(function(d) {
                     return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-                })
+                });
             });
 
 }
