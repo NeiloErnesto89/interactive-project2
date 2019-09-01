@@ -243,27 +243,31 @@ My entire dataset was taken from [Our World Data](https://ourworldindata.org/). 
 
 [Numbeo](https://https://www.numbeo.com) - was a big source of inspiration. 
 
+I found this [DC.JS How to Guide](https://dc-js.github.io/dc.js/docs/stock.html) really helpful, particularly for helping me figure out some of the more nuanced issues with the lables and titles on the charts.
+
 My fellow coding students, in particular: 
 
-[Tim Nelson](https://github.com/TravelTimN/ci-ifd-lead/blob/master/week3-d3-dc/d3-dc.md) - *And from this helpful list I found further inspiration from more of my fellow students' briliant projects:* 
+[Tim Nelson](https://github.com/TravelTimN/ci-ifd-lead/blob/master/week3-d3-dc/d3-dc.md) - *And from his informative and helpful list I found further inspiration from more of my fellow students' briliant projects:* 
 
-[Dave Laffan | Super Hero Dashboard](https://steview-d.github.io/superhero-dashboard/) - the use of a reset filter button was derived from this very aesthically 
+[Dave Laffan | Super Hero Dashboard](https://steview-d.github.io/superhero-dashboard/) - the use of a reset filter button was derived from this very aesthically pleasing site. 
 
-[Matt Bush | London Dashboard](https://gitbush.github.io/london-boroughs/) - From this site I found the idea of a popup modal explaination to be really good which inspired me to add my own simplifed version.
+[Matt Bush | London Dashboard](https://gitbush.github.io/london-boroughs/) - From this site I found the idea of a popup modal explaination to be really good, which inspired me to add my own simplifed version. There was also a brilliant use of GeoJson map on this site, which I really appreciate among many other things.
 
 W3 Schools as always was a big help: 
 [W3 Schools](https://www.w3schools.com/w3css/w3css_modal.asp)
+
+I referred to this [dc.js examples resource](https://dc-js.github.io/dc.js/examples/) but found it at times the example sources were not so easy to replicate.
 
 [Bootstrap 4 docs here](https://getbootstrap.com/docs/4.0/examples/cover/)
 
 I found [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to be of some help with a guide on the flexbox and also for my [background image](https://css-tricks.com/perfect-full-page-background-image/) 
 
-I used this [resource](https://dc-js.github.io/dc.js/examples/) but found it at times not so easy to replicate
-
 
 I also read the examples from the Sample Project section to help guide for the project and the Readme and incorporated some sections such as the Deployment section on my Readme - [here](https://courses.codeinstitute.net/courses/course-v1:codeinstitute+FE+2017_T3/courseware/c75714c9636b4cf59120d60acbec6ffd/f851a16813f14b3aae7bd1e6560443cd/?activate_block_id=block-v1%3Acodeinstitute%2BFE%2B2017_T3%2Btype%40sequential%2Bblock%40f851a16813f14b3aae7bd1e6560443cd)
 
-I also referred to [Stack Overflow](https://stackoverflow.com/) for a number of queries but never took any snippets directly as there were often conflicting advice on the queries I had made but they were still helpful nonetheless. 
+I also very often referred to [Stack Overflow](https://stackoverflow.com/) for a number of queries but never took any snippets directly as there were often conflicting advice or non applicable on the queries I had made but they were still helpful nonetheless. 
+
+Slack and the Tutor were also very decent resources and helped me out whenever I was in need. 
 
 
 ### Content
@@ -279,5 +283,5 @@ The wireframe images were made by me using [Balsamiq](https://balsamiq.com/).
 
 ### Acknowledgements
 
-My family and girlfriend.
+Thanks to my mentor, Maranatha, the Code Institute (especially the Tutor support) and of course, my family and girlfriend.
 
