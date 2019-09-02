@@ -28,13 +28,16 @@
 
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-    <!-- Javascript -->
+    <!-- Javascript Libraries -->
 
     <script type="text/javascript" src="js/d3.min.js"></script>
     <script type="text/javascript" src="js/crossfilter.min.js"></script>
     <script type="text/javascript" src="js/dc.min.js"></script>
     <script type="text/javascript" src="js/queue.min.js"></script>
 
+
+    <!-- Javascript -->
+    
     <script type="text/javascript" src="js/pollution.js"></script>
 
 </head>
@@ -82,11 +85,12 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h1 class="mainheader mb-2" id="main-head">EU Pollution Index</h1>
-                        <p class="underhead text-center"><i>This following information is focused on the 28 countries of the European Union, compiling some of the data,  available on <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, to evaluate the effects on pollution within these nations.</i></p>
+                        <p class="underhead text-center"><i>The following information is focused on the 28 countries of the European Union, compiling some of the data, available on <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, to evaluate the effects on pollution within these nations.</i></p>
 
 
                         <hr>
-                        <div class="col-offset-6 sicky">
+                      
+                        <div>
 
                             <button type="button" id="reset-button" class=" btn btn-sm btn-warning text-center" data-toggle="tooltip" data-placement="top" title="Click here to reset the filters">Reset Filters</button>
                         </div>
@@ -104,7 +108,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h2 class="regional-line">EU in Numbers </h2>
-                        <p class="underhead text-center"><i>Here are some stats that show some pertient information about the EU.</i></p>
+                        <p class="underhead text-center"><i>Here are some stats that show some pertient figures on the EU.</i></p>
                     </div>
 
 
@@ -200,7 +204,7 @@
 
                         <h2 class="regional-pie text-center">EU Death (from Air Pollution) v GDP Plot </h2>
 
-                        <p class="underhead text-center"><i>According to <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, "air pollution can be defined as the emission of harmful substances to the atmosphere". Here we look at the correlation between GDP and the morality rate directly caused by air pollution.<br>*The following death figure is displaying the death toll per 100,000 people. The GDP is in euros (€).</i></p>
+                        <p class="underhead text-center"><i>According to <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, "air pollution can be defined as the emission of harmful substances to the atmosphere". Here we look at the correlation between GDP (Gross Domestic Product) and the morality rate directly caused by air pollution.<br>*The following death figure is displaying the death toll per 100,000 people. The GDP is in euros (€).</i></p>
 
 
 
@@ -233,7 +237,7 @@
 
                         <h2 class="regional-pie text-center">Waste Generation v GDP </h2>
 
-                        <p class="underhead text-center"><i>This chart looks into the correlation between the nominal GDP versus the per capita plastic waste generation. Does having more disposable income make people more prone to plastic waste generation?</i></p>
+                        <p class="underhead text-center"><i>This chart looks into the correlation between the GDP versus the per capita plastic waste generation. Does having more disposable income per capita make people more prone to plastic waste generation?</i></p>
 
                     </div>
 
@@ -259,7 +263,7 @@
 
                         <h2 class="regional-pie text-center">Yearly Plastic Waste Generation per Capita (kgs)</h2>
 
-                        <p class="underhead text-center"><i>The following charts focus on per capita plastic waste generation. We can see that 9 nations generation the same amount of per capita waste as the other 19 nations.<br> *These charts don't take into account the waste disposal methods such as recycling which reduce overall plastic waste.</i></p>
+                        <p class="underhead text-center"><i>The following charts focus on per capita plastic waste generation. We can see that 9 nations generate almost exactly the same amount of per capita plastic waste as the other 19 nations.<br> *These charts don't take into account the waste disposal methods such as recycling which reduce overall plastic waste.</i></p>
 
                     </div>
 
@@ -316,7 +320,7 @@
     <!--container fluid -->
 
 
-    <!--MODAL POPUP-->
+    <!--Modal Popup -->
 
     <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog" aria-labelledby="popUpModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -340,7 +344,7 @@
             </div>
         </div>
     </div>
-    <!--MODAL POPUP-->
+    <!--Modal Popup -->
 
 
     </div>

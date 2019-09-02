@@ -6,18 +6,17 @@
 
 ### Design brief:
 
-My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast the 28countries within the European Union based on a small range of different criteria.
+My aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast the 28 countries of the European Union, based on a small range of different criteria.
 
-I wanted to build a frontend interactive site, based on a topic that I'm very interested in and that would naturally allow me to utilise the skills I've acquired during the course. My aim was that the site would be easy to digest from the User's perspective, simple to navigate and also educational on this topic. 
+I wanted to build a frontend interactive site, based on a topic that I'm very interested in and that also would naturally allow me to utilise the skills I've acquired during the course. My goal was that the site would be easy to digest from the User's perspective, simple to navigate, pleasant to interactive with and also educational on this topic. 
 
-Using Co2 emission levels, which are used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, annual death rate caused by air pollution. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could gauge different cities from around the world against one another based on a number of factors, for example:  Ireland v  Germany on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index, howeve,r I think the EU 28 nations are an interesting dataset due to the diverse nation within the EU. 
+Using Co2 emission levels, which are used as the main pollution indicator, I also took GDP, Plastic Waste Generation per country/capita, and annual death rate caused by air pollution were the other data sources. I had previously used a similar index on the website [Numbeo](https://https://www.numbeo.com/pollution/comparison.jsp), where the user could gauge different cities from around the world against one another based on a number of factors, for example:  Ireland v  Germany,  on air pollution levels. Obviously due to nature and size of countries it's not as accurate as a city-based pollution index (which is an option on the site Numbeo also), however, we regards to my project, I think the EU 28 nations are an interesting dataset due to the diverse nation within the EU, so I decided against pursuing a comparator type site (for the moment). 
  
-I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations within the EU. So the tool is not only enjoyable but has the added benefit of showcasing to the user some important data.
+Overall, I felt this was a fun, interesting and very educational way to informing the user of the different ecological situations within the EU. The site is not only enjoyable and responsive but has the added benefit of showcasing to the user some important data.
  
 ### UX:
  
-
-Using the skills I had garnered from my last project, I felt I should continue along with a similar layout for the UX. My focus was on usability, with a simple and effcient design. 
+Using the skills I had garnered from my last project, I felt I should continue along with a similar layout for the UX. My focus was on usability and responsiveness of the charts, with a simple and effcient design. I used a fairly monochromatic color palette (of green) and only really deviating from that with the colors on the charts and the reset button, as so to accentuate them. I also decided to focus almost solely on a desktop site due to the restrictive nature of dc.js and d3.js. I would hope in the future to work on this to improve the mobile and tablet view of the site.
 
 Like my first milestone project, the aim of the UX on this site is to make it as simple, legible and efficent for the user as possible. Data visualisation is a great way to make a chunk of numerical data more interesting, so I wanted the UX to be straightforward. I also wanted the data to be presented in an enjoyable manner, despite, what is in actual fact, a bit of a morbid subject. 
 
@@ -168,11 +167,16 @@ Also I would recommend against viewing in on a mobile device as it has been desi
 
 A [HTML Validator](https://validator.w3.org/#validate_by_input) was used to check the HTML, I had 5 warnings and 10 errors, which mainly came from a span class which I replaced with a div.
 
-A [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to check the CSS for any major errors. 
+A [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to check the CSS for any major errors, the only code that caused any minor issue had to do with the `-webkit-background-size: cover` styling. This, however, in my testing, had no affect on the page so I decided to leave it in. 
 
 ##### Unresolved Bugs
 
-An issue I have is that on the piecharts, once a nation has been selected, the other criteria that was presented already on the piechart became one jumbled line at the top of the piechart. 
+An issue I have is that on the Piecharts that have a number of labels, once 1 nation has been selected (Ireland, for example), which would automatically take 100% of the chart, as it's the only selection, the other criteria labels that were presented already on the piechart became one jumbled line at the top of the chart. This wasn't resolved but with a little bit more time I could fix this I'm sure. 
+
+The 2 barchart coloring is slightly erratic. I fixed most of this but I didn't want to lose too much time on it as it's on a slight bug and doesn't affect functionality. 
+
+On the Piecharts, when choosing a nation  which would automatically take 100% of the chart as it's the only selection, the remain labels return to the top of the piechart and become 1 blurred word. 
+
 
 ### User Story Testing 
 
@@ -221,6 +225,8 @@ In terms of my goals, with regards to the user story, I felt I've achieved a sim
 
 ## Deployment
 
+This project was crafted on the AWS Cloud 9 IDE. 
+
 #### *This site is deployed on [Github](https://github.com/NeiloErnesto89/interactive-project2)*
 
 This site is hosted using GitHub. I deployed my work directly from the master branch. I added, committed  and pushed my updates via the terminal regularly and then the deployed site automatically upon receiving the new commits to the master branch/source. As per requirements, the landing/main page of the site has been titled `index.html` for the deployment to function correctly on Github pages. 
@@ -239,17 +245,19 @@ Here, once again, is my [deployed site](https://neiloernesto89.github.io/interac
 
 *"Credit where credit's due"*
 
-My entire dataset was taken from [Our World Data](https://ourworldindata.org/). I maniplated the data myself using Excel to keep the dataset simple.
+This project was substantially aided by the course content from the [Code Institue](https://codeinstitute.net/).
+
+My entire dataset was taken from [Our World Data](https://ourworldindata.org/). I maniplated the data myself using Excel to keep the dataset simple. All facts or deinitions onthe site were also taken from this site. 
 
 [Numbeo](https://https://www.numbeo.com) - was a big source of inspiration. 
 
-I found this [DC.JS How to Guide](https://dc-js.github.io/dc.js/docs/stock.html) really helpful, particularly for helping me figure out some of the more nuanced issues with the lables and titles on the charts.
+I found this [DC.JS How to Guide](https://dc-js.github.io/dc.js/docs/stock.html) really helpful, particularly for helping me figure out some of the more nuanced issues with the lables and titles on the charts such as the row chart title.
 
 My fellow coding students, in particular: 
 
-[Tim Nelson](https://github.com/TravelTimN/ci-ifd-lead/blob/master/week3-d3-dc/d3-dc.md) - *And from his informative and helpful list I found further inspiration from more of my fellow students' briliant projects:* 
+[Tim Nelson](https://github.com/TravelTimN/ci-ifd-lead/blob/master/week3-d3-dc/d3-dc.md) - *And from his informative and helpful list I found further inspiration from more of my fellow students' briliant projects:*
 
-[Dave Laffan | Super Hero Dashboard](https://steview-d.github.io/superhero-dashboard/) - the use of a reset filter button was derived from this very aesthically pleasing site. 
+[Dave Laffan | Super Hero Dashboard](https://steview-d.github.io/superhero-dashboard/) - the use of a reset filter button on my page was derived from this very aesthically pleasing site. 
 
 [Matt Bush | London Dashboard](https://gitbush.github.io/london-boroughs/) - From this site I found the idea of a popup modal explaination to be really good, which inspired me to add my own simplifed version. There was also a brilliant use of GeoJson map on this site, which I really appreciate among many other things.
 
@@ -260,14 +268,9 @@ I referred to this [dc.js examples resource](https://dc-js.github.io/dc.js/examp
 
 [Bootstrap 4 docs here](https://getbootstrap.com/docs/4.0/examples/cover/)
 
-I found [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to be of some help with a guide on the flexbox and also for my [background image](https://css-tricks.com/perfect-full-page-background-image/) 
+I also very often referred to [Stack Overflow](https://stackoverflow.com/) for a number of queries but never took any snippets directly as there was sometimes conflicting advice or it was not fully applicable with regards to the queries I had made but they were still helpful nonetheless. 
 
-
-I also read the examples from the Sample Project section to help guide for the project and the Readme and incorporated some sections such as the Deployment section on my Readme - [here](https://courses.codeinstitute.net/courses/course-v1:codeinstitute+FE+2017_T3/courseware/c75714c9636b4cf59120d60acbec6ffd/f851a16813f14b3aae7bd1e6560443cd/?activate_block_id=block-v1%3Acodeinstitute%2BFE%2B2017_T3%2Btype%40sequential%2Bblock%40f851a16813f14b3aae7bd1e6560443cd)
-
-I also very often referred to [Stack Overflow](https://stackoverflow.com/) for a number of queries but never took any snippets directly as there were often conflicting advice or non applicable on the queries I had made but they were still helpful nonetheless. 
-
-Slack and the Tutor were also very decent resources and helped me out whenever I was in need. 
+My mentor Maranatha, the Tutor Support Page and  Slack channels were also very helpful resources and they were a brilliant resource that aided me in my endeavours whenever I was in need. 
 
 
 ### Content
@@ -283,5 +286,5 @@ The wireframe images were made by me using [Balsamiq](https://balsamiq.com/).
 
 ### Acknowledgements
 
-Thanks to my mentor, Maranatha, the Code Institute (especially the Tutor support) and of course, my family and girlfriend.
+Thanks to my mentor, Maranatha, the Code Institute (especially the Tutor support page) and of course, my family and girlfriend.
 
