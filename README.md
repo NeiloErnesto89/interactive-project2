@@ -4,7 +4,7 @@
 #### **_A site aimed at showcasing visualised data via responsive charts based on pollution levels in the EU._**
 
 
-### Design brief:
+### Design Brief - Overview
 
 The aim of this project was to provide a simple and user friendly visualisation of data for the user to compare and contrast the 28 countries of the European Union, based on a small range of different criteria.
 
@@ -18,7 +18,7 @@ However, we regards to my project, I think the EU 28 nations are an interesting 
  
 Overall, I felt this was a simple, interesting and very educational way to informing the user about the different ecological situations within the EU. The site is not only enjoyable and responsive but has the added benefit of showcasing to the user some important data.
  
-### UX:
+### UX
  
 Using the skills I had garnered from my last project and from this modules I had just completed, I felt I should continue along with a similar layout for the UX. My focus was on usability and responsiveness of the charts, with a simple and efficient design. 
 
@@ -28,7 +28,7 @@ Like my first milestone project, the aim of the UX on this site is to make it as
 
 My user type ideally will be curious and will follow the simple narrative of the site. As per requirements, it's a 1 page site and the data/graphs are presented in a loosely descending order. I placed that which I felt to be the more pertinent graphs towards to the top of the page, with accompanying information. The aim being that the Users interest will be piqued by the facts presented and, along with the simple ux, will encourage the User to continue scrolling to learn more.  
 
-### User Story: 
+### User Story
 
 *The following are some of the potential users/user stories:*
 
@@ -77,9 +77,9 @@ I used [Balsamiq](https://balsamiq.com/) to create simple wireframe mockups, whi
 This wireframe, Figure 3, is a simplified version of my initial  wireframe, Figure 1, which I adapted to keep it visually appeasing. I focused a bit more on the UX by having the charts at maximum of 2, side by side. It's very similar to the final page.
 
 
-## Features:
+## Features
 
-### Existing Features:
+### Existing Features
 
 The following features are presenting in a loose order of appearance: 
 
@@ -118,7 +118,7 @@ The following technologies were used on this project:
 - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) - is used as the stylesheet language for styling and rendering.
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - is used as the standard markup language. 
     
-##### Framework 
+##### Framework
 
 - [Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - is a CSS framework that aids the grid and the layout and also the modal popup in this project.
 
@@ -133,7 +133,7 @@ The following technologies were used on this project:
 -  [Queue.js version 1.0.7](https://github.com/d3/d3-queue) - for loading the Json file dataset.
 -  [dc.min.css](css/dc.min.css) - DC used for CSS, for example adjusting the angle of the labels on the chart to allow for the full 28 nations names to fit.
 
-##### Others - Icons/Fonts
+##### Others - Icons/Fonts:
 
 - [Font Awesome 5.7.2](https://fontawesome.com/) - a icon and font toolkit, used for the icons in this project.
 - [Google Font](https://fonts.googleapis.com/css?family=Montserrat:400,700) - for the font (Montserrat used).
@@ -166,7 +166,7 @@ I had an issue with Microsoft Edge and the background colour/opacity on my navba
 
 Also I would recommend against viewing in on a mobile device as it has been designed as a desktop site.
 
-##### The tools I used for testing my code: 
+##### The tools I used for testing my code 
 
 [JS Hint](https://jshint.com/) was used to check my pollution.js code. I had 19 missed semi-colons, which were resolved.
 
@@ -185,7 +185,7 @@ The 2 barcharts colouring is slightly erratic. I fixed most of this but I didn't
 And to reiterate, the site doesn't function on Internet Explorer due to the aforementioned css/grid issues and also it hasn't been designed for mobile devices, so the charts aren't fully visible on mobiles.
 
 
-### User Story Testing 
+### User Story Testing
 
 User Stories referenced earlier were:
 
