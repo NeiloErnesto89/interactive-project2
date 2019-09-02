@@ -26,19 +26,19 @@ I used a fairly monochromatic colour palette (of green - again, going for an *ec
 
 Like my first milestone project, the aim of the UX on this site is to make it as simple, legible and efficient for the user as possible. Data visualisation is a great way to make a chunk of numerical data more interesting, so I wanted the UX to be straightforward. I also wanted the data to be presented in an enjoyable manner, despite, what is in actual fact, a bit of a morbid subject. 
 
-My user type ideally will be curious and will follow the simple narrative of the site. As per requirements, it's a 1 page site and the data/graphs are presented in a loosely descending order. I placed that which I felt to be the more pertinent graphs towards to the top of the page, with accompanying information. The aim being that the Users interest will be piqued by the facts presented and, along with the simple ux, will encourage the User to continue scrolling to learn more.  
+My user type ideally will be curious and will follow the simple narrative of the site. As per requirements, it's a 1 page site. The data/graphs are presented in a loosely descending order. I placed that which I felt to be the most pertinent graphs towards to the top of the page, with accompanying information. The aim being that the Users interest will be piqued by the facts presented and, along with the simple ux, will encourage the User to continue scrolling to learn more.  
 
 ### User Story
 
-*The following are some of the potential users/user stories:*
+*The following are some of the potential users' stories:*
 
-1. *"I'm interested in environmental issues and I would like to learn more".*
+1. *"I'm interested in environmental issues and I would like to learn more."*
 
-2. *"I would like to learn more about pollution, are people dying from it already and what are the other impacts on societies from pollution".*
+2. *"I would like to learn more about pollution; are people dying from it already and what are its other impacts on societies?"*
 
-3. *"I'm not at concerned with the environment but I'm a fan of geography and random data".*
+3. *"I'm not at all concerned with the environment but I'm a fan of geography and random data."*
 
-4. *"I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution".*
+4. *"I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) generation and Co2 emissions as well as mortality rates from air pollution."*
 
 
 ### *Wireframes*
@@ -88,15 +88,15 @@ The following features are presenting in a loose order of appearance:
 - The EU in Numbers Box: To give the user quick, numerical data on the size of the population(s) in the EU and the total level of Co2 Emissions. The numbers adjust depending on the users selection(s). 
 - A "Select All" Selector: Underneath the numbers box, is a simple but powerful function with allows the user to choose a country, which automatically updates all the charts to show the selected nation's data.
 - A Fixed 'Reset Button': Placed in the bottom right of the screen, the user can simply click to refresh any of the charts statistics. It also has a simple tooltip to give further explanation.
-- EU Nations Barchart to show the differing levels of Co2 emissions per state. 
+- EU Nations Barchart to show the differing levels of Co2 emissions per state. A user can hover over the bars to gather more country specific information.
 - An EU Emission Piechart follows to give another view of the statistics with a capped legend (as not to be too much info visually), which shows that well over 50% of the emissions in the EU come from just 5 nations.
 - Following this Piechart, is a Per Capita Emissions Chart, which gave a more nuanced insight into the pollution levels per capita in the 28 nations. 
 
-- The (Death v GDP) Scatterplot: I found this chart to be the most aesthetically pleasing visualisation, demonstrating the loose correlation between higher GDP and lower mortality rates due to air pollution and vice versa. This chart is perhaps the least interactive chart but still can be adapted using the "Select all" selector. 
+- The (Death v GDP) Scatterplot: I found this chart to be the most aesthetically pleasing visualisation, demonstrating the loose correlation between higher GDP and lower mortality rates due to air pollution and vice versa. This chart is also perhaps the least interactive chart but still can be adapted using the "Select all" selector. Further information available upon hovering above coloured dots.
 - Waste Generation v GDP Graph: This chart is a line graph gauging the levels of plastic waste generation per capita against the GDP levels. This chart has a brush function, which allows the user to select a range on the graph.
-- Plastic Waste Generation Piechart: This pie chart shows the main nations and their citizens' plastic waste generation levels per annum. 
+- Plastic Waste Generation Piechart: This pie chart shows the main nations and their citizens' plastic waste generation levels per annum. Hover function with more information possible.
 - The '+-50kgs' Piechart split: This simple chart just shows the split of nations with citizens who produce either more or less than 50kgs of plastic waste per annum, along with the percentage of the total plastic waste level. 
-- Row Chart: This chart renders the same data of the Plastic Waste Generation Pie Chart, but in another form which aids the visual experience for the user. 
+- Row Chart: This chart renders the same data of the Plastic Waste Generation Pie Chart, but in another form which aids the visual experience for the user. Further information available upon hovering mouse over rows. 
 
 ### Features Left to Implement
 
@@ -189,13 +189,13 @@ And to reiterate, the site doesn't function on Internet Explorer due to the afor
 
 User Stories referenced earlier were:
 
-- *"I'm interested in environmental issues and I would like to learn more".*
+- *"I'm interested in environmental issues and I would like to learn more."*
 
-- *"I would like to learn more about pollution, are people dying from it already and what are the other impacts on societies from pollution".* 
+- *"I would like to learn more about pollution, are people dying from it already and what are the other impacts on societies from pollution?."*
 
-- *"I'm not at concerned with the environment but I'm a fan of geography and random data".*
+- *"I'm not at all concerned with the environment but I'm a fan of geography and random data."*
 
-- *"I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution".*
+- *"I'm from a European country and I want to know how my nation does in terms of GDP, waste (plastic) and Co2 emissions as well as mortality rates from air pollution."*
 
 I have found, through my testing that all potential User Story criteria from above has been appeased and that all Users will all have the same experience, which will be the following step by step story here: 
 
