@@ -40,6 +40,9 @@ function makeGraphs(error, euData) {
 }
 
 
+
+/* EU Population Number */
+
 function show_eu_population(ndx) {
     var populationGroup = ndx.groupAll().reduceSum(function(d) {
         return d.Population;
@@ -52,6 +55,9 @@ function show_eu_population(ndx) {
             return d;
         });
 }
+
+
+/* EU Emissions Number */
 
 function show_eu_emission_total(ndx) {
     var emissionGroup = ndx.groupAll().reduceSum(function(d) {
@@ -69,6 +75,9 @@ function show_eu_emission_total(ndx) {
 }
 
 
+/* EU Country Selector */
+
+
 function show_country_selector(ndx) {
     dim = ndx.dimension(dc.pluck("Country"));
     group = dim.group();
@@ -80,6 +89,8 @@ function show_country_selector(ndx) {
             return d.key ;
         });
 }
+
+/* EU Emissions Barchart  */
 
 function show_eu_barchart(ndx) {
     var country_dim = ndx.dimension(dc.pluck("Country"));
@@ -112,6 +123,9 @@ function show_eu_barchart(ndx) {
 
 
 }
+
+
+/* EU Emissions Piechart  */
 
 
 function show_country_emission_pie(ndx) {
@@ -151,6 +165,9 @@ function show_country_emission_pie(ndx) {
    
 }
 
+/* EU Emissions per Capita Barchart  */
+
+
 function show_eu_per_cap_barchart(ndx) {
     var nation_dim = ndx.dimension(dc.pluck("Country"));
     var total_emissions_per = nation_dim.group().reduceSum(dc.pluck('EmissionsPerCap'));
@@ -183,6 +200,8 @@ function show_eu_per_cap_barchart(ndx) {
 
 }
 
+
+/* EU Death v GDP Scatterplot  */
 
 function show_death_v_gdp_correlation(ndx) {
 
@@ -227,6 +246,9 @@ function show_death_v_gdp_correlation(ndx) {
 }
 
 
+/* EU Waste per Capita v GDP Linechart  */
+
+
 function show_waste_gdp_line(ndx) {
 
 
@@ -249,6 +271,10 @@ function show_waste_gdp_line(ndx) {
         .yAxisLabel("Yearly Plastic Generation per Capita (kg)")
         .yAxis().ticks(5);
 }
+
+
+/* EU Plastic Waste per Capita Pie w/ % */
+
 
 function show_yearly_plastic_waste_pie(ndx) {
     var area_dim = ndx.dimension(dc.pluck('Country'));
@@ -288,6 +314,8 @@ function show_yearly_plastic_waste_pie(ndx) {
             });
 }
 
+/* EU Plastic Waste Pie: + or - 50kgs per Capita*/
+
 function show_plastic_waste_dim(ndx) {
 
     var plastic_dimension = ndx.dimension(function(d) {
@@ -318,6 +346,9 @@ function show_plastic_waste_dim(ndx) {
             });
 
 }
+
+
+/* EU Plastic Waste Rowchart per Capita*/
 
 
 function show_row_chart(ndx) {

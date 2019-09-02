@@ -30,15 +30,15 @@
 
     <!-- Javascript Libraries -->
 
-    <script type="text/javascript" src="js/d3.min.js"></script>
-    <script type="text/javascript" src="js/crossfilter.min.js"></script>
-    <script type="text/javascript" src="js/dc.min.js"></script>
-    <script type="text/javascript" src="js/queue.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/crossfilter.min.js"></script>
+    <script src="js/dc.min.js"></script>
+    <script src="js/queue.min.js"></script>
 
 
     <!-- Javascript -->
     
-    <script type="text/javascript" src="js/pollution.js"></script>
+    <script src="js/pollution.js"></script>
 
 </head>
 
@@ -47,8 +47,10 @@
     <div class="cover-container d-flex mx-auto flex-column">
 
 
+        <!--Navbar -->
+
         <header class="nav-container pl-0 pr-0">
-            <!--removed fluid-->
+            <!--removed fluid here to allow text to adapt-->
 
             <nav class="navbar navbar-expand-lg navbar-light mb-1 text-center">
                 <a class="navbar-brand" data-target="#popUpModal" data-toggle="modal"><i class="fas fa-globe-europe" style="font-size:40px;color:green;"></i></a>
@@ -76,6 +78,10 @@
             </nav>
 
         </header>
+        
+        <!--Navbar End -->
+        
+        <!-- Main Section -->
 
         <main>
 
@@ -85,7 +91,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h1 class="mainheader mb-2" id="main-head">EU Pollution Index</h1>
-                        <p class="underhead text-center"><i>The following information is focused on the 28 countries of the European Union, compiling some of the data, available on <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, to evaluate the effects on pollution within these nations.</i></p>
+                        <p class="underhead text-center"><i>The following information is focused on the 28 countries of the European Union, compiling some of the data, available on <a href="https://ourworldindata.org/air-pollution" target="_blank ">Our World in Data</a>, to evaluate the effects of pollution on these nations.</i></p>
 
 
                         <hr>
@@ -108,7 +114,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h2 class="regional-line">EU in Numbers </h2>
-                        <p class="underhead text-center"><i>Here are some stats that show some pertient figures on the EU.</i></p>
+                        <p class="underhead text-center"><i>Here are some stats that show some pertinent figures on the EU.</i></p>
                     </div>
 
 
@@ -139,7 +145,7 @@
 
                         <div id="country-selector"></div>
 
-                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Click on the 'Select all' selector to chose a country. It affects all the charts!">
+                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Click on the 'Select all' selector to choose a country. It affects all the charts!">
                                           <button class="btn btn-sm mini-button" style="pointer-events: none; font-size:15px;color:green;" type="button" disabled><i class="fas fa-info" style=""></i></button>
                                         </span>
 
@@ -191,7 +197,7 @@
                     </div>
 
                 <br>
-                    <p class="underhead text-center mt-1"><i><b>The Co2 Emissions breakdown is by country (million tonnes) and per capita(tonnes).<br>Germany is the biggest emitters as a nation however the Luxembourgish are the highest per capita emitter of Co2.</b></i>
+                    <p class="underhead text-center mt-1"><i><b>The Co2 Emissions breakdown is by country (million tonnes) and per capita (tonnes).<br>Germany is the biggest emitters as a nation however the Luxembourgish are the highest per capita emitter of Co2.</b></i>
                     </p>
                 </div>
 
@@ -224,7 +230,7 @@
                     </div>
 
                     <br>
-                    <p class="underhead text-center mt-1"><i><b>From the findings, we can see that there is a loose correlation between low GDP and higher death toll from air pollution.<br>We can also see that Bulgaria, with the lowest GDP by a considerable amount also has by far the highest death rate.</b></i>
+                    <p class="underhead text-center mt-1"><i><b>From the findings, we can see that there is a loose correlation between low GDP and higher death toll from air pollution.<br>We can also see that Bulgaria, with the lowest GDP by a considerable amount, also has, by far, the highest death rate from air pollution.</b></i>
                     </p>
 
                 </div>
@@ -245,7 +251,7 @@
 
                         <div class="col-md-offset-5" id="waste-gdp-line"></div>
 
-                        <!--   <svg viewBox="0 0 370 220"></svg> -->
+                        <!--  test viewbox option - <svg viewBox="0 0 370 220"></svg> -->
 
                     </div>
 
@@ -298,8 +304,10 @@
             </div>
 
         </main>
+        
+        <!-- Main Section end -->
 
-        <!-- FOOTER -->
+        <!-- Footer -->
 
         <footer class="container-fluid footer">
             <div class="row footer-row">
@@ -314,10 +322,10 @@
             </div>
 
         </footer>
+        <!-- Footer end -->
 
-
-    </div>
-    <!--container fluid -->
+     <!--   </div> -->
+    <!-- former div, no defunct and removed container fluid -->
 
 
     <!--Modal Popup -->
@@ -332,7 +340,7 @@
         </button>
                 </div>
                 <div class="modal-body"><i>
-                    This page is aimed at visualing some of the European Union's most significant statistical facts, with regards to pollution within the 28 nations.<br>Thanks for visiting, feel free to stick around to find out more!</i>
+                    This page is aimed at visualising some of the European Union's most significant statistical data, with regards to pollution within the 28 nations.<br>Thanks for visiting, feel free to stick around to find out more!</i>
                 </div>
                 <div class="modal-footer">
                     <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Wherever you see this icon, just hover over it to find out more information">
@@ -348,7 +356,7 @@
 
 
     </div>
-    <!--cover -->
+    <!--cover container end -->
 
 
     <!-- Bootstrap JS-->
@@ -364,6 +372,8 @@
             alert("Hello visitor ! The time is now: " + time + " and welcome to the EU Pollution Index!");
         }
     </script> -->
+    
+    <!-- JS Script and Reset -->
 
     <script src="js/script.js"></script>
     <script src="js/reset.js"></script>

@@ -170,13 +170,15 @@ Also I would recommend against viewing in on a mobile device as it has been desi
 
 [JS Hint](https://jshint.com/) was used to check my pollution.js code. I had 19 missed semi-colons, which were resolved.
 
-A [HTML Validator](https://validator.w3.org/#validate_by_input) was used to check the HTML, I had 5 warnings and 10 errors, which mainly came from a span class which I replaced with a div.
+A [HTML Validator](https://validator.w3.org/#validate_by_input) was used to check the HTML, I had 5 warnings and 10 errors, which mainly came from a misplaced `span` class which I replaced successfully with a `div` as well as the removal of a rogue `div`. I also removed the warnings which were simply just a case of removing the `type="text/javascript"` from some of the JavaScript tags. There remains a small number of errors (3) according to the validator:  all for same issue with regards to the `target="_blank"` code for the links. However, all the worked as I wanted, with no issues, so I didn't remove this code.
 
-A [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to check the CSS for any major errors, the only code that caused any minor issue had to do with the `-webkit-background-size: cover` styling. This, however, in my testing, had no effect on the page so I decided to leave it in. 
+A [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to check the CSS for any major errors, the only code that caused any minor issue had to do with the `-webkit-background-size: cover` styling. This, however, in my testing, had no effect on the page so I decided to leave it in.
+
+I also used *spell check* on Microsoft Word for my `readme.md` and `index.html` to ensure there were no glaring spelling mistakes. In the HTML and CSS files, I originally named some headers classes with the word `regional` included, as I had originally intended to add some information on world regions. However, I left this code in as I felt it posed too few problems, in the future I will simply be clearer in naming.
 
 ##### Unresolved Bugs
 
-An issue I have is that on the Piecharts that have a number of labels, once 1 nation has been selected (Ireland, for example), which would automatically take 100% of the chart, as it's the only selection, the other labels that were presented already on the Piechart then became one jumbled/blurred line of text at the top of the chart. This wasn't resolved but with a little bit more time I could fix this I'm sure. 
+An issue I have is that on the Piecharts that have a number of labels, once 1 nation has been selected (Ireland, for example), which would automatically take 100% of the chart, as it's the only selection, the other labels that were presented already on the Piechart then became one jumbled/blurred line of text at the top of the chart. This wasn't resolved but with a little bit more time I could fix this I'm sure. And also, if a number of nations have been selected, depending on the choices, there can be some overlap in labels.
 
 The 2 barcharts colouring is slightly erratic. I fixed most of this but I didn't want to lose too much time on it as it's on a slight bug and doesn't affect functionality. 
 
